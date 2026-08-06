@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+
+/* ======================================================
+   GLOBAL STYLES
+====================================================== */
+
+html,
+body {
+  font-family: $font-primary;
+  font-size: $text-base;
+  font-weight: $weight-regular;
+  line-height: $leading-normal;
+
+  color: $text-primary;
+  background: $background;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root,
+#__next {
+  min-height: 100vh;
+}
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-300;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gray-400;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+button {
+  transition: $transition-all;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+img {
+  user-select: none;
+}

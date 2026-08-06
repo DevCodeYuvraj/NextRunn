@@ -1,0 +1,27 @@
+/* ======================================================
+   TRANSITIONS
+====================================================== */
+
+$transition-fast: .15s ease;
+
+$transition-default: .25s ease;
+
+$transition-medium: .35s ease;
+
+$transition-slow: .5s ease;
+
+/* Frequently Used */
+
+$transition-color:
+  color $transition-default,
+  background-color $transition-default,
+  border-color $transition-default;
+
+$transition-transform:
+  transform $transition-default;
+
+$transition-opacity:
+  opacity $transition-default;
+
+$transition-all:
+  all $transition-default;

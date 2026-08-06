@@ -1,0 +1,221 @@
+export const incomeChart = {
+  title: "Income",
+  amount: "$3,741",
+  change: "15%",
+  trend: "up",
+
+  overview: [62, 112, 78, 126, 74, 93, 68, 116, 130],
+
+  chart: [
+    { day: "Mon", value: 85 },
+    { day: "Tue", value: 50 },
+    { day: "Wed", value: 20 },
+    { day: "Thu", value: 95 },
+    { day: "Fri", value: 60 },
+    { day: "Sat", value: 150 },
+    { day: "Sun", value: 120 },
+  ],
+};
+
+export const expenseChart = {
+  title: "Expense",
+  amount: "$2,501",
+  change: "15%",
+  trend: "down",
+
+  overview: [128, 78, 92, 48, 108, 72, 124, 84, 62],
+
+  chart: [
+    { day: "Mon", value: 120 },
+    { day: "Tue", value: 150 },
+    { day: "Wed", value: 60 },
+    { day: "Thu", value: 95 },
+    { day: "Fri", value: 20 },
+    { day: "Sat", value: 50 },
+    { day: "Sun", value: 85 },
+  ],
+};
+
+export const balanceCard = {
+  owner: "Cahaya Hikari",
+  balance: "$78321,21",
+  cardNumber: "•••• •••• •••• 1234",
+  validThru: "03/21",
+};
+export const transactions = [
+  // ---------- PAGE 1 ----------
+  {
+    id: 1,
+    company: "Heaven Studio",
+    email: "samantha@email.com",
+    date: "January 12, 2021",
+    invoice: "#INV-2021-1045",
+    amount: "- $98.21",
+    type: "expense",
+  },
+  {
+    id: 2,
+    company: "Fire Studio",
+    email: "tony@email.com",
+    date: "January 15, 2021",
+    invoice: "#INV-2021-1072",
+    amount: "+ $75.21",
+    type: "income",
+  },
+  {
+    id: 3,
+    company: "GenZ Studio",
+    email: "karen@email.com",
+    date: "January 18, 2021",
+    invoice: "#INV-2021-1124",
+    amount: "+ $198.00",
+    type: "income",
+  },
+  {
+    id: 4,
+    company: "Good Studio",
+    email: "jordan@email.com",
+    date: "January 22, 2021",
+    invoice: "#INV-2021-1159",
+    amount: "- $200.00",
+    type: "expense",
+  },
+  {
+    id: 5,
+    company: "Jekate Studio",
+    email: "nadila@email.com",
+    date: "January 28, 2021",
+    invoice: "#INV-2021-1187",
+    amount: "- $170.00",
+    type: "expense",
+  },
+
+  // ---------- PAGE 2 ----------
+  {
+    id: 6,
+    company: "Pixel Labs",
+    email: "johnny@email.com",
+    date: "February 03, 2021",
+    invoice: "#INV-2021-1204",
+    amount: "+ $420.00",
+    type: "income",
+  },
+  {
+    id: 7,
+    company: "Next Pixel",
+    email: "tony@email.com",
+    date: "February 08, 2021",
+    invoice: "#INV-2021-1231",
+    amount: "- $62.00",
+    type: "expense",
+  },
+  {
+    id: 8,
+    company: "Creative House",
+    email: "samantha@email.com",
+    date: "February 11, 2021",
+    invoice: "#INV-2021-1259",
+    amount: "+ $265.00",
+    type: "income",
+  },
+  {
+    id: 9,
+    company: "Rocket Design",
+    email: "karen@email.com",
+    date: "February 15, 2021",
+    invoice: "#INV-2021-1290",
+    amount: "- $149.00",
+    type: "expense",
+  },
+  {
+    id: 10,
+    company: "Blue Ocean",
+    email: "nadila@email.com",
+    date: "February 20, 2021",
+    invoice: "#INV-2021-1314",
+    amount: "+ $520.00",
+    type: "income",
+  },
+
+  // ---------- PAGE 3 ----------
+  {
+    id: 11,
+    company: "Infinity Tech",
+    email: "jordan@email.com",
+    date: "March 02, 2021",
+    invoice: "#INV-2021-1348",
+    amount: "- $88.00",
+    type: "expense",
+  },
+  {
+    id: 12,
+    company: "Vision Studio",
+    email: "johnny@email.com",
+    date: "March 07, 2021",
+    invoice: "#INV-2021-1372",
+    amount: "+ $350.00",
+    type: "income",
+  },
+  {
+    id: 13,
+    company: "Nova Agency",
+    email: "tony@email.com",
+    date: "March 12, 2021",
+    invoice: "#INV-2021-1403",
+    amount: "- $127.00",
+    type: "expense",
+  },
+  {
+    id: 14,
+    company: "Alpha Works",
+    email: "karen@email.com",
+    date: "March 18, 2021",
+    invoice: "#INV-2021-1425",
+    amount: "+ $610.00",
+    type: "income",
+  },
+  {
+    id: 15,
+    company: "Fusion Studio",
+    email: "samantha@email.com",
+    date: "March 24, 2021",
+    invoice: "#INV-2021-1451",
+    amount: "- $185.00",
+    type: "expense",
+  },
+];
+
+export const earningCategories = [
+  {
+    id: 1,
+    title: "Working Hard",
+    amount: "$50",
+    target: "$1000",
+    progress: 52,
+    type: "working",
+  },
+  {
+    id: 2,
+    title: "Side Project",
+    amount: "$50",
+    target: "$1000",
+    progress: 43,
+    type: "project",
+  },
+  {
+    id: 3,
+    title: "Invesment",
+    amount: "$50",
+    target: "$1000",
+    progress: 26,
+    type: "investment",
+  },
+  {
+    id: 4,
+    title: "Digital Assets",
+    amount: "$50",
+    target: "$1000",
+    progress: 62,
+    type: "digital",
+  },
+];

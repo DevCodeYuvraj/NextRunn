@@ -1,0 +1,44 @@
+@forward "colors";
+@forward "spacing";
+@forward "typography";
+@forward "breakpoints";
+@forward "shadows";
+@forward "transitions";
+@forward "animations";
+@forward "z-index";
+
+/* ======================================================
+   COMMON VARIABLES
+====================================================== */
+
+/* Sidebar */
+
+$sidebar-width: 280px;
+$sidebar-collapsed-width: 90px;
+
+/* Header */
+
+$header-height: 72px;
+
+/* Layout */
+
+$content-max-width: 1920px;
+
+/* Cards */
+
+$card-border-radius: 16px;
+
+/* Forms */
+
+$input-height: 48px;
+$button-height: 44px;
+
+/* Avatar */
+
+$avatar-sm: 32px;
+$avatar-md: 40px;
+$avatar-lg: 56px;
+
+/* Transition */
+
+$default-transition: .25s ease-in-out;

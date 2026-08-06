@@ -1,0 +1,114 @@
+@use "../abstracts" as *;
+
+/* ======================================================
+   DISPLAY
+====================================================== */
+
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ======================================================
+   TEXT
+====================================================== */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+/* ======================================================
+   WIDTH
+====================================================== */
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* ======================================================
+   SPACING
+====================================================== */
+
+.mt-auto { margin-top: auto; }
+.ms-auto { margin-left: auto; }
+.me-auto { margin-right: auto; }
+
+.p-0 { padding: 0 !important; }
+.m-0 { margin: 0 !important; }
+
+/* ======================================================
+   OVERFLOW
+====================================================== */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* ======================================================
+   BORDER RADIUS
+====================================================== */
+
+.rounded {
+  border-radius: $radius-md;
+}
+
+.rounded-lg {
+  border-radius: $radius-lg;
+}
+
+.rounded-xl {
+  border-radius: $radius-xl;
+}
+
+.rounded-full {
+  border-radius: 999px;
+}
+
+/* ======================================================
+   SHADOWS
+====================================================== */
+
+.shadow-sm {
+  box-shadow: $shadow-sm;
+}
+
+.shadow-md {
+  box-shadow: $shadow-md;
+}
+
+.shadow-lg {
+  box-shadow: $shadow-lg;
+}

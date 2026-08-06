@@ -1,0 +1,99 @@
+@use "sass:map";
+@use "breakpoints" as *;
+
+/* ======================================================
+   RESPONSIVE MIXINS
+====================================================== */
+
+@mixin respond($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+/* ======================================================
+   FLEX
+====================================================== */
+
+@mixin flex(
+  $justify: flex-start,
+  $align: center,
+  $direction: row,
+  $wrap: nowrap,
+  $gap: 0
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+/* ======================================================
+   GRID
+====================================================== */
+
+@mixin grid($columns, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+/* ======================================================
+   SIZE
+====================================================== */
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* ======================================================
+   POSITION
+====================================================== */
+
+@mixin absolute(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+@mixin scrollbar($size: 8px) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #cbd5e1;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* ======================================================
+   ELLIPSIS
+====================================================== */
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

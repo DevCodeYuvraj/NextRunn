@@ -1,0 +1,43 @@
+.avatar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #eef2f7;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+.online {
+  position: absolute;
+
+  right: 2px;
+  bottom: 2px;
+
+  width: 12px;
+  height: 12px;
+
+  background: #22c55e;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+}
