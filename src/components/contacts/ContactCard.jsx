@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 import { getAvatarById } from "@/data/avatarRegistry";
-import { getAvatarById } from "@/data/avatarRegistry";
+
 
 import {
   MoreHorizontal,
