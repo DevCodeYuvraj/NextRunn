@@ -123,11 +123,12 @@ export default function ContactCard({
         {contact.image ? (
 
           <Image
-            src={avatar?.image}
+            src={contact.image}
             alt={contact.name}
             width={108}
-            height={108}
+            height={108} 
             className={styles.avatar}
+            unoptimized
           />
         ) : (
           <div className={styles.placeholder}>
