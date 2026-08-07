@@ -1,67 +1,31 @@
-import admin from "@/assets/avatars/admin.jpg";
-
-import user01 from "@/assets/avatars/user01.jpg";
-import user02 from "@/assets/avatars/user02.jpg";
-import user03 from "@/assets/avatars/user03.jpg";
-import user04 from "@/assets/avatars/user04.jpg";
-import user05 from "@/assets/avatars/user05.jpg";
-import user06 from "@/assets/avatars/user06.jpg";
-import user07 from "@/assets/avatars/user07.jpg";
-import user08 from "@/assets/avatars/user08.jpg";
-import user09 from "@/assets/avatars/user09.jpg";
-import user10 from "@/assets/avatars/user10.jpg";
-import user11 from "@/assets/avatars/user11.jpg";
-import user12 from "@/assets/avatars/user12.jpg";
-import user13 from "@/assets/avatars/user13.jpg";
-import user14 from "@/assets/avatars/user14.jpg";
-import user15 from "@/assets/avatars/user15.jpg";
-import user16 from "@/assets/avatars/user16.jpg";
-import user17 from "@/assets/avatars/user17.jpg";
-import user18 from "@/assets/avatars/user18.jpg";
-
 export const avatars = {
-  admin,
-  user01,
-  user02,
-  user03,
-  user04,
-  user05,
-  user06,
-  user07,
-  user08,
-  user09,
-  user10,
-  user11,
-  user12,
-  user13,
-  user14,
-  user15,
-  user16,
-  user17,
-  user18,
+  admin: "/avatars/admin.jpg",
+  user01: "/avatars/user01.jpg",
+  user02: "/avatars/user02.jpg",
+  user03: "/avatars/user03.jpg",
+  user04: "/avatars/user04.jpg",
+  user05: "/avatars/user05.jpg",
+  user06: "/avatars/user06.jpg",
+  user07: "/avatars/user07.jpg",
+  user08: "/avatars/user08.jpg",
+  user09: "/avatars/user09.jpg",
+  user10: "/avatars/user10.jpg",
+  user11: "/avatars/user11.jpg",
+  user12: "/avatars/user12.jpg",
+  user13: "/avatars/user13.jpg",
+  user14: "/avatars/user14.jpg",
+  user15: "/avatars/user15.jpg",
+  user16: "/avatars/user16.jpg",
+  user17: "/avatars/user17.jpg",
+  user18: "/avatars/user18.jpg",
 };
 
-export const defaultAvatars = [
-  { id: "admin", image: avatars.admin },
-  { id: "user01", image: avatars.user01 },
-  { id: "user02", image: avatars.user02 },
-  { id: "user03", image: avatars.user03 },
-  { id: "user04", image: avatars.user04 },
-  { id: "user05", image: avatars.user05 },
-  { id: "user06", image: avatars.user06 },
-  { id: "user07", image: avatars.user07 },
-  { id: "user08", image: avatars.user08 },
-  { id: "user09", image: avatars.user09 },
-  { id: "user10", image: avatars.user10 },
-  { id: "user11", image: avatars.user11 },
-  { id: "user12", image: avatars.user12 },
-  { id: "user13", image: avatars.user13 },
-  { id: "user14", image: avatars.user14 },
-  { id: "user15", image: avatars.user15 },
-  { id: "user16", image: avatars.user16 },
-  { id: "user17", image: avatars.user17 },
-  { id: "user18", image: avatars.user18 },
-];
+export const defaultAvatars = Object.entries(avatars).map(
+  ([id, image]) => ({
+    id,
+    image,
+  })
+);
 
 export const getAvatarById = (id) =>
   defaultAvatars.find((avatar) => avatar.id === id);
