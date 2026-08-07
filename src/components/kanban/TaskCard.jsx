@@ -151,16 +151,19 @@ export default function TaskCard({
 
       <div className={styles.footer}>
         <div className={styles.members}>
-          {card.members.map((member, index) => (
-            <Avatar
-              key={index}
-              src={getAvatar(index)}
-              alt={member}
-              size={30}
-            />
-          ))}
-        </div>
+          {card.members.map((member, index) => {
+            const avatar = getAvatar(index);
 
+            return (
+              <Avatar
+                key={index}
+                src={avatar?.image || null}
+                alt={`Member ${index + 1}`}
+                size={30}
+              />
+            );
+          })}
+        </div>
         <div className={styles.stats}>
           <div className={styles.stat}>
             <MdChatBubbleOutline />
