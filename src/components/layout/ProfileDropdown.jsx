@@ -19,7 +19,7 @@ import {
   MdManageAccounts,
 } from "react-icons/md";
 
-import admin from "@/assets/avatars/admin.jpg";
+const admin = "/avatars/admin.jpg";
 
 const DEFAULT_USER = {
   name: "John Doe",
