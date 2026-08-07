@@ -1,13 +1,23 @@
-import admin from "@/assets/avatars/admin.jpg";
+const admin = "/avatars/admin.jpg";
 
-import user01 from "@/assets/avatars/user01.jpg";
-import user02 from "@/assets/avatars/user02.jpg";
-import user03 from "@/assets/avatars/user03.jpg";
-import user04 from "@/assets/avatars/user04.jpg";
-import user05 from "@/assets/avatars/user05.jpg";
-import user06 from "@/assets/avatars/user06.jpg";
-import user07 from "@/assets/avatars/user07.jpg";
-
+const user01 = "/avatars/user01.jpg";
+const user02 = "/avatars/user02.jpg";
+const user03 = "/avatars/user03.jpg";
+const user04 = "/avatars/user04.jpg";
+const user05 = "/avatars/user05.jpg";
+const user06 = "/avatars/user06.jpg";
+const user07 = "/avatars/user07.jpg";
+const user08 = "/avatars/user08.jpg";
+const user09 = "/avatars/user09.jpg";
+const user10 = "/avatars/user10.jpg";
+const user11 = "/avatars/user11.jpg";
+const user12 = "/avatars/user12.jpg";
+const user13 = "/avatars/user13.jpg";
+const user14 = "/avatars/user14.jpg";
+const user15 = "/avatars/user15.jpg";
+const user16 = "/avatars/user16.jpg";
+const user17 = "/avatars/user17.jpg";
+const user18 = "/avatars/user18.jpg";
 export const initialMails = [
   {
     id: 1,
