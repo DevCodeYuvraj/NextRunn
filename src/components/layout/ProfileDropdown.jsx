@@ -20,12 +20,11 @@ import {
 } from "react-icons/md";
 
 const admin = "/avatars/admin.jpg";
-
 const DEFAULT_USER = {
   name: "John Doe",
   role: "Administrator",
   email: "john.doe@nextrun.com",
-  avatar: admin,
+  avatar: "/avatars/admin.jpg",
 };
 
 import styles from "./ProfileDropdown.module.css";
