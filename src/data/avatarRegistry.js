@@ -1,5 +1,9 @@
 import { avatars } from "./avatarData";
-
+export function getAvatarById(id) {
+  return defaultAvatars.find(
+    avatar => avatar.id === id
+  );
+}
 export const defaultAvatars = [
   {
     id: "user01",
