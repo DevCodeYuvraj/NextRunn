@@ -24,6 +24,7 @@ export const contactGroups = [
 export const initialContacts = [
   {
     id: 1,
+    image: "user01",
     name: "Samantha William",
     email: "samantha@email.com",
     phone: "+1 (555) 325-7645",
@@ -32,10 +33,10 @@ export const initialContacts = [
     location: "New York",
     group: "work",
     favourite: true,
-    avatar: "S",
   },
   {
     id: 2,
+    image: "user02",
     name: "Tony Soap",
     email: "tony@email.com",
     phone: "+1 (555) 647-1221",
@@ -44,10 +45,10 @@ export const initialContacts = [
     location: "California",
     group: "work",
     favourite: false,
-    avatar: "T",
   },
   {
     id: 3,
+    image: "user03",
     name: "Jordan Nico",
     email: "jordan@email.com",
     phone: "+1 (555) 984-5564",
@@ -56,10 +57,10 @@ export const initialContacts = [
     location: "Texas",
     group: "friends",
     favourite: false,
-    avatar: "J",
   },
   {
     id: 4,
+    image: "user04",
     name: "Karen Hope",
     email: "karen@email.com",
     phone: "+1 (555) 236-9874",
@@ -68,10 +69,10 @@ export const initialContacts = [
     location: "Chicago",
     group: "family",
     favourite: true,
-    avatar: "K",
   },
   {
     id: 5,
+    image: "user05",
     name: "Alex Morgan",
     email: "alex@email.com",
     phone: "+1 (555) 789-1254",
@@ -80,10 +81,10 @@ export const initialContacts = [
     location: "Seattle",
     group: "important",
     favourite: true,
-    avatar: "A",
   },
   {
     id: 6,
+    image: "user06",
     name: "Emma Watson",
     email: "emma@email.com",
     phone: "+1 (555) 452-2354",
@@ -92,8 +93,7 @@ export const initialContacts = [
     location: "Boston",
     group: "friends",
     favourite: false,
-    avatar: "E",
   },
-
 ];
+
 export const contacts = initialContacts;
