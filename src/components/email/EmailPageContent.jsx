@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-import admin from "@/assets/avatars/admin.jpg";
+const admin = "/avatars/admin.jpg";
 
 import ComposeModal from "./ComposeModal";
 import MailSidebar from "./MailSidebar";
