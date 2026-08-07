@@ -1,9 +1,10 @@
-import user01 from "@/assets/avatars/user01.jpg";
-import user02 from "@/assets/avatars/user02.jpg";
-import user03 from "@/assets/avatars/user03.jpg";
-import user04 from "@/assets/avatars/user04.jpg";
-import user05 from "@/assets/avatars/user05.jpg";
-import user06 from "@/assets/avatars/user06.jpg";
+
+const user01 = "/avatars/user01.jpg";
+const user02 = "/avatars/user02.jpg";
+const user03 = "/avatars/user03.jpg";
+const user04 = "/avatars/user04.jpg";
+const user05 = "/avatars/user05.jpg";
+const user06 = "/avatars/user06.jpg";
 
 export const invoiceStats = [
   {
