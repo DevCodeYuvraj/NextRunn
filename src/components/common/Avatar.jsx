@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-import defaultAvatar from "@/assets/avatars/default.jpg";
+const defaultAvatar = "/avatars/default.jpg";
 
 import styles from "./Avatar.module.css";
 
