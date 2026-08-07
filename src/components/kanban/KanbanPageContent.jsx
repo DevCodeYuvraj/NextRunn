@@ -124,7 +124,7 @@ export default function KanbanPageContent() {
                 return (
                   <Avatar
                     key={index}
-                    src={avatar?.image || null}
+                    src={avatar?.image}
                     alt={`Member ${index + 1}`}
                     size={38}
                   />
