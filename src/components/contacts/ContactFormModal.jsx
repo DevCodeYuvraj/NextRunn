@@ -119,18 +119,11 @@ export default function ContactFormModal({
                     >
                         <AvatarPicker
                             value={form.image}
-                            onChange={(
-                                avatar
-                            ) =>
-                                setForm(
-                                    (
-                                        prev
-                                    ) => ({
-                                        ...prev,
-                                        image:
-                                            avatar.image,
-                                    })
-                                )
+                            onChange={(avatar) =>
+                                setForm((prev) => ({
+                                    ...prev,
+                                    image: avatar.id,
+                                }))
                             }
                         />
                     </div>
