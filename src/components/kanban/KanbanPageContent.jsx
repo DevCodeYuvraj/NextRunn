@@ -118,14 +118,18 @@ export default function KanbanPageContent() {
 
           <div className={styles.right}>
             <div className={styles.avatarGroup}>
-              {[0, 1, 2, 3].map((index) => (
-                <Avatar
-                  key={index}
-                  src={getAvatar(index)}
-                  alt={`Member ${index + 1}`}
-                  size={38}
-                />
-              ))}
+              {[0, 1, 2, 3].map((index) => {
+                const avatar = getAvatar(index);
+
+                return (
+                  <Avatar
+                    key={index}
+                    src={avatar?.image || null}
+                    alt={`Member ${index + 1}`}
+                    size={38}
+                  />
+                );
+              })}
 
               <div className={styles.moreAvatar}>
                 +5
