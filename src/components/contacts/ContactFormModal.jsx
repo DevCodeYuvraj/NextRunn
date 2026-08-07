@@ -127,7 +127,8 @@ export default function ContactFormModal({
                                         prev
                                     ) => ({
                                         ...prev,
-                                        image: avatar.id,
+                                        image:
+                                            avatar.image,
                                     })
                                 )
                             }
