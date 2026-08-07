@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
-
+import { getAvatarById } from "@/data/avatarRegistry";
 import { getAvatarById } from "@/data/avatarRegistry";
 
 import {
@@ -55,6 +55,7 @@ export default function ContactCard({
       );
   }, []);
   const avatar = getAvatarById(contact.image);
+  
   return (
     <article className={styles.card}>
       <div className={styles.menuBox}>
