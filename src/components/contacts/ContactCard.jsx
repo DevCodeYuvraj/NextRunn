@@ -55,7 +55,7 @@ export default function ContactCard({
       );
   }, []);
   const avatar = getAvatarById(contact.image);
-  
+
   return (
     <article className={styles.card}>
       <div className={styles.menuBox}>
@@ -123,7 +123,7 @@ export default function ContactCard({
       <div className={styles.avatarWrapper}>
         {contact.image ? (
           <Image
-            src={avatar?.image || "/avatars/default.jpg"}
+            src={avatar?.image || "/avatars/admin.jpg"}
             alt={contact.name}
             width={108}
             height={108}
