@@ -54,6 +54,7 @@ export default function ContactCard({
         handleClick
       );
   }, []);
+  const avatar = getAvatarById(contact.image);
 return (
   <article className={styles.card}>
     <div className={styles.menuBox}>
