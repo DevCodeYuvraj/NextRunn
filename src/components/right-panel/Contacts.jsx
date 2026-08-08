@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { MdEmail } from "react-icons/md";
+
 import Avatar from "@/components/common/Avatar";
+import { getAvatarById } from "@/data/avatarData";
 import { initialContacts as contacts } from "@/data/contacts";
 
 import styles from "./Contacts.module.css";
@@ -17,54 +19,74 @@ export default function Contacts() {
     : contacts.slice(0, INITIAL_CONTACTS);
 
   function handleViewMore() {
-    setShowAll((previousState) => !previousState);
+    setShowAll(
+      (previousState) => !previousState
+    );
   }
 
   return (
     <section className={styles.contacts}>
-      <h3 className={styles.title}>Contacts</h3>
+      <h3 className={styles.title}>
+        Contacts
+      </h3>
 
       <div className={styles.contactList}>
-        {visibleContacts.map((contact) => (
-          <article
-            key={contact.id}
-            className={styles.contactItem}
-          >
-            <Avatar
-              src={contact.image}
-              alt={contact.name}
-              size={48}
-            />
+        {visibleContacts.map((contact) => {
+          const avatar = getAvatarById(
+            contact.image
+          );
 
-            <div className={styles.contactInfo}>
-              <h4 className={styles.name}>
-                {contact.name}
-              </h4>
-
-              <p className={styles.role}>
-                {contact.position} • {contact.company}
-              </p>
-            </div>
-
-            <a
-              href={`mailto:${contact.email}`}
-              className={styles.emailButton}
-              aria-label={`Email ${contact.name}`}
+          return (
+            <article
+              key={contact.id}
+              className={styles.contactItem}
             >
-              <MdEmail size={14} />
-            </a>
-          </article>
-        ))}
+              <Avatar
+                src={avatar?.image || null}
+                alt={contact.name}
+                size={48}
+              />
+
+              <div
+                className={styles.contactInfo}
+              >
+                <h4 className={styles.name}>
+                  {contact.name}
+                </h4>
+
+                <p className={styles.role}>
+                  {contact.position} •{" "}
+                  {contact.company}
+                </p>
+              </div>
+
+              <a
+                href={`mailto:${contact.email}`}
+                className={
+                  styles.emailButton
+                }
+                aria-label={`Email ${contact.name}`}
+              >
+                <MdEmail size={14} />
+              </a>
+            </article>
+          );
+        })}
       </div>
 
-      {contacts.length > INITIAL_CONTACTS && (
+      {contacts.length >
+        INITIAL_CONTACTS && (
         <button
           type="button"
-          className={styles.viewMoreButton}
+          className={
+            styles.viewMoreButton
+          }
           onClick={handleViewMore}
           aria-expanded={showAll}
         >
-          {showAll ? "Show Less" : "View More"}
+          {showAll
+            ? "Show Less"
+            : "View More"}
         </button>
       )}
     </section>

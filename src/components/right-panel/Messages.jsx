@@ -11,15 +11,17 @@ import styles from "./Messages.module.css";
 const INITIAL_MESSAGES = 3;
 
 export default function Messages() {
-  const [showAll, setShowAll] =
-    useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   const visibleMessages = showAll
     ? messages
-    : messages.slice(
-        0,
-        INITIAL_MESSAGES
-      );
+    : messages.slice(0, INITIAL_MESSAGES);
+
+  function handleViewMore() {
+    setShowAll(
+      (previousState) => !previousState
+    );
+  }
 
   return (
     <section className={styles.messages}>
@@ -27,64 +29,62 @@ export default function Messages() {
         Messages
       </h3>
 
-      <div
-        className={styles.messageList}
-      >
+      <div className={styles.messageList}>
         {visibleMessages.map(
-          (message, index) => (
-            <article
-              key={message.id}
-              className={
-                styles.messageItem
-              }
-            >
-              <Avatar
-                src={getAvatar(index)}
-                alt={message.name}
-                size={46}
-              />
+          (message, index) => {
+            const avatar = getAvatar(index);
 
-              <div
-                className={
-                  styles.messageContent
-                }
+            return (
+              <article
+                key={message.id}
+                className={styles.messageItem}
               >
-                <h4
-                  className={styles.name}
-                >
-                  {message.name}
-                </h4>
+                <Avatar
+                  src={avatar?.image || null}
+                  alt={message.name}
+                  size={46}
+                />
 
-                <p
+                <div
                   className={
-                    styles.message
+                    styles.messageContent
                   }
                 >
-                  {message.message}
-                </p>
+                  <h4
+                    className={styles.name}
+                  >
+                    {message.name}
+                  </h4>
 
-                <span
-                  className={
-                    styles.time
-                  }
-                >
-                  {message.time}
-                </span>
-              </div>
-            </article>
-          )
+                  <p
+                    className={
+                      styles.message
+                    }
+                  >
+                    {message.message}
+                  </p>
+
+                  <span
+                    className={styles.time}
+                  >
+                    {message.time}
+                  </span>
+                </div>
+              </article>
+            );
+          }
         )}
       </div>
 
       {messages.length >
         INITIAL_MESSAGES && (
         <button
+          type="button"
           className={
             styles.viewMoreButton
           }
-          onClick={() =>
-            setShowAll(!showAll)
-          }
+          onClick={handleViewMore}
+          aria-expanded={showAll}
         >
           {showAll
             ? "Show Less"

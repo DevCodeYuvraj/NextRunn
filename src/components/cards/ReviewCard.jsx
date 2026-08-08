@@ -8,14 +8,29 @@ import styles from "./ReviewCard.module.css";
 export default function ReviewCard({
   name,
   review,
-  index,
 }) {
+  /*
+   * Generate a stable avatar from the review name.
+   * We don't use Math.random() because that would
+   * change the avatar every render.
+   */
+  const avatarIndex =
+    name
+      .split("")
+      .reduce(
+        (total, character) =>
+          total + character.charCodeAt(0),
+        0
+      ) % 18;
+
+  const avatar = getAvatar(avatarIndex);
+
   return (
     <article className={styles.card}>
       <Avatar
-        src={getAvatar(index)}
+        src={avatar?.image || null}
         alt={name}
-        size={54}
+        size={56}
       />
 
       <h4 className={styles.name}>
