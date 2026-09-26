@@ -1,0 +1,87 @@
+@use "../../styles/abstracts" as *;
+
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f6fa;
+  position: relative;
+}
+
+.backdrop {
+  display: none;
+
+  @include respond(lg) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &.backdropActive {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include respond(lg) {
+    gap: 20px;
+    padding: 20px 18px;
+  }
+
+  @include respond(md) {
+    gap: 16px;
+    padding: 16px 14px;
+  }
+
+  @include respond(xs) {
+    gap: 12px;
+    padding: 12px 10px;
+  }
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include respond(lg) {
+    gap: 20px;
+  }
+
+  @include respond(md) {
+    gap: 16px;
+  }
+
+  @include respond(xs) {
+    gap: 12px;
+  }
+}

@@ -15,7 +15,7 @@ import {
   MdStarBorder,
 } from "react-icons/md";
 
-import styles from "./TodoActionMenu.module.css";
+import styles from "./TodoActionMenu.module.scss";
 
 export default function TodoActionMenu({
   task,

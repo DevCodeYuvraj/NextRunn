@@ -2,7 +2,7 @@
 
 import Avatar from "@/components/common/Avatar";
 
-import styles from "./ChatContact.module.css";
+import styles from "./ChatContact.module.scss";
 
 export default function ChatContact({
   chat,

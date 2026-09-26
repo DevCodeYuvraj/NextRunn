@@ -4,7 +4,7 @@ import {
   MdInsertDriveFile,
 } from "react-icons/md";
 
-import styles from "./MessageBubble.module.css";
+import styles from "./MessageBubble.module.scss";
 
 export default function MessageBubble({
   message,

@@ -10,7 +10,7 @@ import InvoiceDetailsModal from "./InvoiceDetailsModal";
 import EditInvoiceModal from "./EditInvoiceModal";
 import DeleteInvoiceModal from "./DeleteInvoiceModal";
 
-import styles from "./InvoiceTable.module.css";
+import styles from "./InvoiceTable.module.scss";
 
 const ITEMS_PER_PAGE = 5;
 

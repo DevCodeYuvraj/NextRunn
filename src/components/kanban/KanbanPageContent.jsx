@@ -13,7 +13,7 @@ import {
 import BoardDropdown from "./BoardDropdown";
 import InviteModal from "./InviteModal";
 import KanbanBoard from "./KanbanBoard";
-import styles from "./KanbanPageContent.module.css";
+import styles from "./KanbanPageContent.module.scss";
 
 export default function KanbanPageContent() {
   const [favorite, setFavorite] = useState(false);

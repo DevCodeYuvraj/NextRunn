@@ -5,7 +5,7 @@ import {
   MdArrowDropDown,
 } from "react-icons/md";
 
-import styles from "./BankingChartCard.module.css";
+import styles from "./BankingChartCard.module.scss";
 
 const MAX_VALUE = 200;
 

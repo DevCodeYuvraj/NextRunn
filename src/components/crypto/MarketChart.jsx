@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-import styles from "./MarketChart.module.css";
+import styles from "./MarketChart.module.scss";
 import CandlestickChart from "./CandlestickChart";
 
 const periods = ["1H", "1D", "1W", "1M", "1Y"];

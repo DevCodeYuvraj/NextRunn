@@ -11,7 +11,7 @@ import {
   balanceCard,
 } from "@/data/bankingData";
 
-import styles from "./BalanceCard.module.css";
+import styles from "./BalanceCard.module.scss";
 
 export default function BalanceCard() {
   const [topUpOpen, setTopUpOpen] =

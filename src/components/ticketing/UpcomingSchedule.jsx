@@ -7,7 +7,7 @@ import { MdAdd } from "react-icons/md";
 import ScheduleCard from "./ScheduleCard";
 import ScheduleModal from "./ScheduleModal";
 
-import styles from "./UpcomingSchedule.module.css";
+import styles from "./UpcomingSchedule.module.scss";
 
 export default function UpcomingSchedule({
   schedules,

@@ -10,7 +10,7 @@ import {
   ticketStats,
 } from "@/data/ticketingData";
 
-import styles from "./TicketStats.module.css";
+import styles from "./TicketStats.module.scss";
 
 function Change({ trend, children }) {
   const isUp = trend === "up";

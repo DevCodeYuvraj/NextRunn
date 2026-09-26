@@ -21,7 +21,7 @@ import {
 
 import { globalSearchItems } from "@/data/globalSearchData";
 
-import styles from "./HeaderSearch.module.css";
+import styles from "./HeaderSearch.module.scss";
 
 const icons = {
   Dashboard: MdSpaceDashboard,

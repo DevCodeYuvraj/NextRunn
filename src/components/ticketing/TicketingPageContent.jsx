@@ -10,7 +10,7 @@ import {
   initialSchedules,
 } from "@/data/ticketingData";
 
-import styles from "./TicketingPageContent.module.css";
+import styles from "./TicketingPageContent.module.scss";
 
 export default function TicketingPageContent() {
   const [schedules, setSchedules] =

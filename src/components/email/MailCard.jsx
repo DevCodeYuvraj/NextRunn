@@ -9,7 +9,7 @@ import {
 
 import Avatar from "@/components/common/Avatar";
 
-import styles from "./MailCard.module.css";
+import styles from "./MailCard.module.scss";
 
 export default function MailCard({
   mail,

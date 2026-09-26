@@ -8,7 +8,7 @@ import {
   MdInsertDriveFile,
 } from "react-icons/md";
 
-import styles from "./CategoryItem.module.css";
+import styles from "./CategoryItem.module.scss";
 
 const ICONS = {
   all: MdDashboard,

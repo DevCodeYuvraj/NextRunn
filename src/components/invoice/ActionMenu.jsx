@@ -10,7 +10,7 @@ import {
   MdDeleteOutline,
 } from "react-icons/md";
 
-import styles from "./ActionMenu.module.css";
+import styles from "./ActionMenu.module.scss";
 
 export default function ActionMenu({
   invoice,

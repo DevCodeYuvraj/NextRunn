@@ -13,7 +13,7 @@ import {
   MdSpaceDashboard,
 } from "react-icons/md";
 
-import styles from "./SettingsDropdown.module.css";
+import styles from "./SettingsDropdown.module.scss";
 
 export default function SettingsDropdown() {
   const wrapperRef = useRef(null);

@@ -5,7 +5,7 @@ import MonthCalendar from "./MonthCalendar";
 import WeeklyCalendar from "./WeeklyCalendar";
 import DayCalendar from "./DayCalendar";
 
-import styles from "./CalendarCard.module.css";
+import styles from "./CalendarCard.module.scss";
 
 export default function CalendarCard({
   events,

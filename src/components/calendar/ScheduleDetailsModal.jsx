@@ -14,7 +14,7 @@ import {
   MdAccessTime,
 } from "react-icons/md";
 
-import styles from "./ScheduleDetailsModal.module.css";
+import styles from "./ScheduleDetailsModal.module.scss";
 
 export default function ScheduleDetailsModal({
   open,

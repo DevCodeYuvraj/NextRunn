@@ -14,7 +14,7 @@ import {
   calendarColors,
 } from "@/data/calendarData";
 
-import styles from "./NewScheduleModal.module.css";
+import styles from "./NewScheduleModal.module.scss";
 
 const EMPTY_FORM = {
   title: "",

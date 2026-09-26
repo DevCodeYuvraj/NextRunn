@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./SummaryCards.module.css";
+import styles from "./SummaryCards.module.scss";
 import SummaryCard from "./SummaryCard";
 
 const coins = [

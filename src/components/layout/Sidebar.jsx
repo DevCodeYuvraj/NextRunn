@@ -2,26 +2,51 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdClose } from "react-icons/md";
 
 import { sidebarItems } from "@/data/sidebar";
 
-import styles from "./Sidebar.module.css";
+import styles from "./Sidebar.module.scss";
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen = false, onClose }) {
   const pathname = usePathname();
 
+  const handleLinkClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <aside className={styles.sidebar}>
-      <Link href="/dashboard" className={styles.logo}>
-        Next<span>run.</span>
-      </Link>
+    <aside
+      className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}
+      aria-label="Main Navigation"
+    >
+      <div className={styles.topBar}>
+        <Link
+          href="/dashboard"
+          className={styles.logo}
+          onClick={handleLinkClick}
+        >
+          Next<span>run.</span>
+        </Link>
+
+        {onClose && (
+          <button
+            type="button"
+            className={styles.closeBtn}
+            onClick={onClose}
+            aria-label="Close sidebar"
+          >
+            <MdClose size={20} />
+          </button>
+        )}
+      </div>
 
       <nav className={styles.navigation}>
         {sidebarItems.map((item) => {
           const Icon = item.icon;
-
-          const active =
-            pathname === item.path;
+          const active = pathname === item.path;
 
           return (
             <Link
@@ -30,6 +55,7 @@ export default function Sidebar() {
               className={`${styles.navItem} ${
                 active ? styles.active : ""
               }`}
+              onClick={handleLinkClick}
             >
               <Icon className={styles.navIcon} />
               <span>{item.title}</span>

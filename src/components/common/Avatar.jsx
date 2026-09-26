@@ -3,8 +3,9 @@
 import Image from "next/image";
 
 import defaultAvatar from "@/assets/avatars/default.jpg";
+import { resolveAvatarSrc } from "@/data/avatarRegistry";
 
-import styles from "./Avatar.module.css";
+import styles from "./Avatar.module.scss";
 
 export default function Avatar({
   src,
@@ -13,18 +14,15 @@ export default function Avatar({
   online = false,
   className = "",
 }) {
-  /*
-   * Next/Image can receive:
-   * - a string path
-   * - a static imported image object
-   *
-   * If src is empty, null, undefined, or invalid,
-   * use the default avatar.
-   */
-  const imageSrc =
-    typeof src === "string"
-      ? src.trim() || defaultAvatar
-      : src || defaultAvatar;
+  let imageSrc = defaultAvatar;
+  if (typeof src === "string") {
+    const trimmed = src.trim();
+    if (trimmed) {
+      imageSrc = resolveAvatarSrc(trimmed, defaultAvatar);
+    }
+  } else if (src) {
+    imageSrc = src;
+  }
 
   return (
     <div
@@ -41,6 +39,7 @@ export default function Avatar({
         height={size}
         className={styles.image}
         draggable={false}
+        unoptimized
       />
 
       {online && (

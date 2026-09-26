@@ -8,7 +8,7 @@ import NewChatModal from "./NewChatModal";
 
 import { initialChatItems } from "@/data/chatData";
 
-import styles from "./ChatPageContent.module.css";
+import styles from "./ChatPageContent.module.scss";
 
 export default function ChatPageContent() {
   const [chats, setChats] = useState(initialChatItems);

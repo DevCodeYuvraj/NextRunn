@@ -1,12 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import RightPanel from "./RightPanel";
 
-import styles from "./MainLayout.module.css";
+import styles from "./MainLayout.module.scss";
 
 const titles = {
   "/dashboard": "Dashboard",
@@ -30,24 +31,41 @@ export default function MainLayout({
   showRightPanel = false,
 }) {
   const pathname = usePathname();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const title = titles[pathname] || "Dashboard";
 
   return (
     <div className={styles.layout}>
-  <Sidebar />
+      {/* Mobile backdrop overlay */}
+      <div
+        className={`${styles.backdrop} ${
+          sidebarOpen ? styles.backdropActive : ""
+        }`}
+        onClick={() => setSidebarOpen(false)}
+        aria-hidden={!sidebarOpen}
+      />
 
-  <main className={styles.main}>
-    <Header title={title} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
 
-    <div className={styles.content}>
-      <div className={styles.page}>
-        {children}
-      </div>
+      <main className={styles.main}>
+        <Header
+          title={title}
+          onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
+          sidebarOpen={sidebarOpen}
+        />
 
-      {showRightPanel ? <RightPanel /> : null}
+        <div className={styles.content}>
+          <div className={styles.page}>
+            {children}
+          </div>
+
+          {showRightPanel ? <RightPanel /> : null}
+        </div>
+      </main>
     </div>
-  </main>
-</div>
   );
 }

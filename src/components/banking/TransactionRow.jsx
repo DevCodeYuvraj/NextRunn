@@ -13,7 +13,7 @@ import {
 import TransactionActionMenu from "./TransactionActionMenu";
 import printReceipt from "./printReceipt";
 
-import styles from "./TransactionRow.module.css";
+import styles from "./TransactionRow.module.scss";
 
 export default function TransactionRow({
   transaction,

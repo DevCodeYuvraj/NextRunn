@@ -27,7 +27,7 @@ const DEFAULT_USER = {
   avatar: "/avatars/admin.jpg",
 };
 
-import styles from "./ProfileDropdown.module.css";
+import styles from "./ProfileDropdown.module.scss";
 
 export default function ProfileDropdown() {
   const router = useRouter();

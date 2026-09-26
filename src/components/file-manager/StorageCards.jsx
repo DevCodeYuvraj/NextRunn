@@ -6,7 +6,7 @@ import {
 
 import StorageCard from "./StorageCard";
 
-import styles from "./StorageCards.module.css";
+import styles from "./StorageCards.module.scss";
 
 export default function StorageCards() {
   return (

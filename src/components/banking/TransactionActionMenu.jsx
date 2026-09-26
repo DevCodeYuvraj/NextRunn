@@ -12,7 +12,7 @@ import {
   MdPrint,
 } from "react-icons/md";
 
-import styles from "./TransactionActionMenu.module.css";
+import styles from "./TransactionActionMenu.module.scss";
 
 export default function TransactionActionMenu({
   transaction,

@@ -5,7 +5,7 @@ import {
   MdKeyboardArrowDown,
 } from "react-icons/md";
 
-import styles from "./CalendarToolbar.module.css";
+import styles from "./CalendarToolbar.module.scss";
 
 const MONTHS = [
   "January",

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./AssetsTable.module.css";
+import styles from "./AssetsTable.module.scss";
 import AssetRow from "./AssetRow";
 
 const assets = [

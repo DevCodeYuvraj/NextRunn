@@ -1,0 +1,130 @@
+@use "../../styles/abstracts" as *;
+
+.card {
+  width: 100%;
+  min-width: 0;
+  @include flex(flex-start, stretch, column);
+  padding: 28px 30px 24px;
+  border-radius: $radius-2xl;
+  background: $white;
+  box-shadow: 0 10px 35px rgba(28, 39, 49, 0.035);
+
+  @include respond(md) {
+    padding: 20px 18px 18px;
+    border-radius: $radius-xl;
+  }
+
+  @include respond(xs) {
+    padding: 16px 12px 14px;
+    border-radius: $radius-lg;
+  }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: relative;
+  z-index: 20;
+  @include flex(space-between, center, row, nowrap, 20px);
+  margin-bottom: 22px;
+
+  @include respond(xs) {
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+
+  h3 {
+    margin: 0;
+    color: #202224;
+    font-size: 18px;
+    font-weight: $weight-bold;
+
+    @include respond(xs) {
+      font-size: 16px;
+    }
+  }
+}
+
+.headerActions {
+  @include flex(flex-start, center, row, nowrap, 14px);
+
+  @include respond(xs) {
+    gap: 8px;
+  }
+}
+
+.headerButton {
+  @include size(30px);
+  @include flex(center, center);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #9ca4b0;
+  font-size: 19px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &.headerButtonActive {
+    color: #3549d8;
+  }
+}
+
+.headerButtonActive {
+  color: #3549d8;
+}
+
+/* =========================
+   FILTER MENU
+========================= */
+
+.filterWrapper {
+  position: relative;
+}
+
+.filterMenu {
+  @include absolute(36px, 0);
+  width: 125px;
+  padding: 6px;
+  border: 1px solid #edf0f4;
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 12px 30px rgba(30, 34, 40, 0.1);
+
+  button {
+    width: 100%;
+    height: 34px;
+    @include flex(flex-start, center);
+    padding: 0 10px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #717986;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover,
+    &.activeFilter {
+      background: #f4f5ff;
+      color: #3549d8;
+    }
+  }
+
+  .activeFilter {
+    background: #f4f5ff;
+    color: #3549d8;
+  }
+}
+
+.rows {
+  min-width: 0;
+  width: 100%;
+  flex: 1;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  @include scrollbar(4px);
+}

@@ -7,7 +7,7 @@ import {
   MdEdit,
 } from "react-icons/md";
 
-import styles from "./AvatarPreview.module.css";
+import styles from "./AvatarPreview.module.scss";
 
 export default function AvatarPreview({
   avatar,
@@ -23,6 +23,7 @@ export default function AvatarPreview({
             width={170}
             height={170}
             className={styles.image}
+            unoptimized
           />
         ) : (
           <div className={styles.placeholder}>

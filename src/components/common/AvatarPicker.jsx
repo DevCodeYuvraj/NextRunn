@@ -15,7 +15,7 @@ import AvatarPreview from "./AvatarPreview";
 import AvatarUpload from "./AvatarUpload";
 import AvatarGallery from "./AvatarGallery";
 
-import styles from "./AvatarPicker.module.css";
+import styles from "./AvatarPicker.module.scss";
 
 export default function AvatarPicker({
   value,
@@ -37,16 +37,23 @@ export default function AvatarPicker({
 
       onChange?.(list[0]);
     } else {
+      const avatarId = typeof value === "string" ? value : value?.id;
       const avatar = list.find(
-        (item) =>
-          item.id === value.id
+        (item) => item.id === avatarId || item.image === value
       );
 
       if (avatar) {
         setSelected(avatar);
+      } else if (
+        typeof value === "string" &&
+        (value.startsWith("data:") ||
+          value.startsWith("/") ||
+          value.startsWith("http"))
+      ) {
+        setSelected({ id: "custom", image: value, type: "uploaded" });
       }
     }
-  }, []);
+  }, [value]);
 
   const handleSelect = (
     avatar

@@ -7,7 +7,7 @@ import {
   MdVideocam,
 } from "react-icons/md";
 
-import styles from "./ConversationHeader.module.css";
+import styles from "./ConversationHeader.module.scss";
 
 export default function ConversationHeader({
   chat,

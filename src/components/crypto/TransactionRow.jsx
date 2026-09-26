@@ -5,7 +5,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 
-import styles from "./TransactionRow.module.css";
+import styles from "./TransactionRow.module.scss";
 
 export default function TransactionRow({ transaction }) {
   const isBuy = transaction.type === "Buy";

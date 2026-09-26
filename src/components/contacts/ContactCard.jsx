@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
-import { getAvatarById } from "@/data/avatarRegistry";
+import { resolveAvatarSrc } from "@/data/avatarRegistry";
 
 
 import {
@@ -17,7 +17,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-import styles from "./ContactCard.module.css";
+import styles from "./ContactCard.module.scss";
 
 export default function ContactCard({
   contact,
@@ -54,7 +54,7 @@ export default function ContactCard({
         handleClick
       );
   }, []);
-  const avatar = getAvatarById(contact.image);
+  const avatarSrc = resolveAvatarSrc(contact.image, "/avatars/admin.jpg");
 
   return (
     <article className={styles.card}>
@@ -91,9 +91,10 @@ export default function ContactCard({
             </button>
 
             <button
-              onClick={() =>
-                onFavourite(contact.id)
-              }
+              onClick={() => {
+                setMenuOpen(false);
+                onFavourite?.(contact.id);
+              }}
             >
               <Star
                 size={15}
@@ -102,8 +103,9 @@ export default function ContactCard({
                     ? "#FDBA12"
                     : "none"
                 }
+                color={contact.favourite ? "#FDBA12" : "currentColor"}
               />
-              Favourite
+              {contact.favourite ? "Unfavourite" : "Favourite"}
             </button>
 
             <button
@@ -123,7 +125,7 @@ export default function ContactCard({
       <div className={styles.avatarWrapper}>
         {contact.image ? (
           <Image
-            src={avatar?.image || "/avatars/admin.jpg"}
+            src={avatarSrc}
             alt={contact.name}
             width={108}
             height={108}

@@ -7,7 +7,7 @@ import {
   MdPersonAddAlt1,
 } from "react-icons/md";
 
-import styles from "./AddContactModal.module.css";
+import styles from "./AddContactModal.module.scss";
 
 const EMPTY_FORM = {
   name: "",

@@ -9,7 +9,7 @@ import {
   MdTune,
 } from "react-icons/md";
 
-import styles from "./ActivityToolbar.module.css";
+import styles from "./ActivityToolbar.module.scss";
 
 export default function ActivityToolbar({
   filter,

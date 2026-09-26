@@ -14,7 +14,7 @@ import {
 import Avatar from "@/components/common/Avatar";
 import { useAvatarContext } from "@/context/AvatarContext";
 
-import styles from "./MessagePanel.module.css";
+import styles from "./MessagePanel.module.scss";
 
 export default function MessagePanel({
   open,

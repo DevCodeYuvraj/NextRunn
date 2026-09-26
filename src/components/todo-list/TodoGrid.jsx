@@ -2,7 +2,7 @@
 
 import TodoTaskCard from "./TodoTaskCard";
 
-import styles from "./TodoGrid.module.css";
+import styles from "./TodoGrid.module.scss";
 
 export default function TodoGrid({
   tasks,

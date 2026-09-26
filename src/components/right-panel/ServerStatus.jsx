@@ -1,4 +1,4 @@
-import styles from "./ServerStatus.module.css";
+import styles from "./ServerStatus.module.scss";
 
 const serverBars = [
   { id: 1, height: 38, color: "#4f46e5" },

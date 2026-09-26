@@ -1,7 +1,7 @@
 "use client";
 
 import { MdEdit, MdContentCopy, MdDelete } from "react-icons/md";
-import styles from "./TaskMenu.module.css";
+import styles from "./TaskMenu.module.scss";
 
 export default function TaskMenu({
   onEdit,

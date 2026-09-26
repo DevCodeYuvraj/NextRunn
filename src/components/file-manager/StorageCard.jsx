@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./StorageCard.module.css";
+import styles from "./StorageCard.module.scss";
 
 export default function StorageCard({
   storage,

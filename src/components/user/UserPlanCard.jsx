@@ -19,7 +19,7 @@ import {
 
 import PlanModal from "./PlanModal";
 
-import styles from "./UserPlanCard.module.css";
+import styles from "./UserPlanCard.module.scss";
 
 export default function UserPlanCard() {
   const [planOpen, setPlanOpen] =

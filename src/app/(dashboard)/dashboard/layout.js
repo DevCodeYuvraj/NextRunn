@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import RightPanel from "@/components/layout/RightPanel";
 
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 
 export default function DashboardLayout({ children }) {
   return (

@@ -16,7 +16,7 @@ import {
   initialTodoTasks,
 } from "@/data/todoData";
 
-import styles from "./TodoPageContent.module.css";
+import styles from "./TodoPageContent.module.scss";
 
 export default function TodoPageContent() {
   const [tasks, setTasks] =

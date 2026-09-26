@@ -4,7 +4,7 @@ import Avatar from "@/components/common/Avatar";
 
 import ActivityAttachments from "./ActivityAttachments";
 
-import styles from "./ActivityItem.module.css";
+import styles from "./ActivityItem.module.scss";
 
 export default function ActivityItem({
   activity,

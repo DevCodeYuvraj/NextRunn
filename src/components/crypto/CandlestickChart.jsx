@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./CandlestickChart.module.css";
+import styles from "./CandlestickChart.module.scss";
 
 const candles = [
   { x: 42, open: 155, close: 137, high: 126, low: 166 },

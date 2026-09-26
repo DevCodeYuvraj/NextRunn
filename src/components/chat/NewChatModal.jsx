@@ -10,7 +10,7 @@ import {
   MdClose,
 } from "react-icons/md";
 
-import styles from "./NewChatModal.module.css";
+import styles from "./NewChatModal.module.scss";
 
 export default function NewChatModal({
   open,

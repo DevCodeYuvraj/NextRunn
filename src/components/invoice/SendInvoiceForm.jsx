@@ -9,7 +9,7 @@ import {
   currencies,
 } from "@/data/invoiceData";
 
-import styles from "./SendInvoiceForm.module.css";
+import styles from "./SendInvoiceForm.module.scss";
 
 export default function SendInvoiceForm({
   invoices,

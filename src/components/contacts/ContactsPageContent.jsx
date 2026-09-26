@@ -4,7 +4,7 @@ import useLocalStorage from "@/hooks/useLocalStorage";
 
 import ContactList from "./ContactList";
 
-import styles from "./ContactsPageContent.module.css";
+import styles from "./ContactsPageContent.module.scss";
 
 import { initialContacts } from "@/data/contacts";
 

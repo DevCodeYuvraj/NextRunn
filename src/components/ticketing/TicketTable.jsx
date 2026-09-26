@@ -7,7 +7,7 @@
   import TicketRow from "./TicketRow";
   import TicketPagination from "./TicketPagination";
 
-  import styles from "./TicketTable.module.css";
+  import styles from "./TicketTable.module.scss";
 
   const ITEMS_PER_PAGE = 5;
 

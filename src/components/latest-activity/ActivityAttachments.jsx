@@ -4,7 +4,7 @@ import {
   MdInsertDriveFile,
 } from "react-icons/md";
 
-import styles from "./ActivityAttachments.module.css";
+import styles from "./ActivityAttachments.module.scss";
 
 export default function ActivityAttachments({
   attachments,

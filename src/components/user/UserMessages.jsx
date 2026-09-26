@@ -11,7 +11,7 @@ import UserMessageRow from "./UserMessageRow";
 import MessagePanel from "./MessagePanel";
 import NewMessageModal from "./NewMessageModal";
 
-import styles from "./UserMessages.module.css";
+import styles from "./UserMessages.module.scss";
 
 const INITIAL_VISIBLE = 5;
 

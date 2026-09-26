@@ -2,7 +2,7 @@
 
 import AvatarItem from "./AvatarItem";
 
-import styles from "./AvatarGallery.module.css";
+import styles from "./AvatarGallery.module.scss";
 
 export default function AvatarGallery({
   avatars,

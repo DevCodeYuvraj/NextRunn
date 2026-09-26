@@ -1,5 +1,5 @@
-import "./globals.css";
-import Provider from "@/redux/Provider"; // adjust the filename if needed
+import "./globals.scss";
+import Provider from "@/redux/Provider";
 
 export const metadata = {
   title: "Nextrun",

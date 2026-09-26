@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./NewMessageModal.module.css";
+import styles from "./NewMessageModal.module.scss";
 
 export default function NewMessageModal({
   open,

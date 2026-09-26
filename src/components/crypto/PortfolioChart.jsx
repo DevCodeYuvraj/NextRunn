@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
-import styles from "./PortfolioChart.module.css";
+import styles from "./PortfolioChart.module.scss";
 
 const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,

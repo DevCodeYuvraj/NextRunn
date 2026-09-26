@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./AvatarGroup.module.css";
+import styles from "./AvatarGroup.module.scss";
 
 export default function AvatarGroup({
   members = [],

@@ -15,7 +15,7 @@ import {
   initialScheduleDetails,
 } from "@/data/calendarData";
 
-import styles from "./CalendarPageContent.module.css";
+import styles from "./CalendarPageContent.module.scss";
 
 export default function CalendarPageContent() {
   const [events, setEvents] =

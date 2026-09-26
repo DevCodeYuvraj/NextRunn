@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./MarketCapitalRow.module.css";
+import styles from "./MarketCapitalRow.module.scss";
 
 import {
   cryptoLogos,

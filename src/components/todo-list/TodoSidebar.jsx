@@ -13,7 +13,7 @@ import {
   todoPriorities,
 } from "@/data/todoData";
 
-import styles from "./TodoSidebar.module.css";
+import styles from "./TodoSidebar.module.scss";
 
 const MENU = [
   {

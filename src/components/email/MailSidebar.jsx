@@ -1,3 +1,5 @@
+"use client";
+
 import {
   MdAdd,
   MdInbox,
@@ -9,9 +11,10 @@ import {
   MdAddCircleOutline,
   MdMoreHoriz,
   MdBookmark,
+  MdClose,
 } from "react-icons/md";
 
-import styles from "./MailSidebar.module.css";
+import styles from "./MailSidebar.module.scss";
 
 const folders = [
   {
@@ -76,13 +79,49 @@ export default function MailSidebar({
   activeLabel,
   onFolderChange,
   onLabelChange,
+  isOpen = false,
+  onClose,
 }) {
+  const handleFolderClick = (id) => {
+    onFolderChange(id);
+    if (onClose) onClose();
+  };
+
+  const handleLabelClick = (id) => {
+    onLabelChange(id);
+    if (onClose) onClose();
+  };
+
+  const handleComposeClick = () => {
+    onCompose();
+    if (onClose) onClose();
+  };
+
   return (
-    <aside className={styles.mailSidebar}>
+    <aside
+      className={`${styles.mailSidebar} ${
+        isOpen ? styles.open : ""
+      }`}
+      aria-label="Mailbox Folders"
+    >
+      <div className={styles.mobileHeader}>
+        <h3>Mailboxes</h3>
+        {onClose && (
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={onClose}
+            aria-label="Close mailboxes"
+          >
+            <MdClose size={20} />
+          </button>
+        )}
+      </div>
+
       <button
         type="button"
         className={styles.newMessageButton}
-        onClick={onCompose}
+        onClick={handleComposeClick}
       >
         <MdAdd size={20} />
         <span>New Message</span>
@@ -96,9 +135,7 @@ export default function MailSidebar({
             <button
               key={folder.id}
               type="button"
-              onClick={() =>
-                onFolderChange(folder.id)
-              }
+              onClick={() => handleFolderClick(folder.id)}
               className={`${styles.folderItem} ${
                 activeFolder === folder.id
                   ? styles.activeFolder
@@ -127,6 +164,7 @@ export default function MailSidebar({
           <button
             type="button"
             className={styles.moreButton}
+            aria-label="More label options"
           >
             <MdMoreHoriz size={18} />
           </button>
@@ -137,9 +175,7 @@ export default function MailSidebar({
             <button
               key={label.id}
               type="button"
-              onClick={() =>
-                onLabelChange(label.id)
-              }
+              onClick={() => handleLabelClick(label.id)}
               className={`${styles.labelItem} ${
                 activeLabel === label.id
                   ? styles.activeLabel
@@ -148,9 +184,7 @@ export default function MailSidebar({
             >
               <MdBookmark
                 size={17}
-                className={
-                  styles[label.className]
-                }
+                className={styles[label.className]}
               />
 
               <span>{label.title}</span>
@@ -162,7 +196,6 @@ export default function MailSidebar({
             className={styles.addLabelButton}
           >
             <MdAddCircleOutline size={18} />
-
             <span>Add label</span>
           </button>
         </div>

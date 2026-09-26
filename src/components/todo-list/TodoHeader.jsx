@@ -5,7 +5,7 @@ import {
   MdFormatListBulleted,
 } from "react-icons/md";
 
-import styles from "./TodoHeader.module.css";
+import styles from "./TodoHeader.module.scss";
 
 export default function TodoHeader({
   title,

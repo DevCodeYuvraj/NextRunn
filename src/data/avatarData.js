@@ -27,8 +27,55 @@ export const defaultAvatars = Object.entries(avatars).map(
   })
 );
 
-export const getAvatarById = (id) =>
-  defaultAvatars.find((avatar) => avatar.id === id);
+export const getAvatarById = (id) => {
+  if (!id) return null;
+
+  // 1. Direct path or data URL
+  if (
+    typeof id === "string" &&
+    (id.startsWith("/") ||
+      id.startsWith("data:") ||
+      id.startsWith("http://") ||
+      id.startsWith("https://"))
+  ) {
+    return { id, image: id };
+  }
+
+  // 2. Default registry avatars
+  const found = defaultAvatars.find((avatar) => avatar.id === id);
+  if (found) return found;
+
+  // 3. Uploaded avatars in localStorage
+  if (typeof window !== "undefined") {
+    try {
+      const saved = localStorage.getItem("nextrun_avatars");
+      if (saved) {
+        const uploadedList = JSON.parse(saved);
+        const uploaded = uploadedList.find((avatar) => avatar.id === id);
+        if (uploaded) return uploaded;
+      }
+    } catch {
+      // ignore JSON parse error
+    }
+  }
+
+  return null;
+};
+
+export const resolveAvatarSrc = (imageRef, fallback = "/avatars/admin.jpg") => {
+  if (!imageRef) return fallback;
+  if (
+    typeof imageRef === "string" &&
+    (imageRef.startsWith("/") ||
+      imageRef.startsWith("data:") ||
+      imageRef.startsWith("http://") ||
+      imageRef.startsWith("https://"))
+  ) {
+    return imageRef;
+  }
+  const avatar = getAvatarById(imageRef);
+  return avatar?.image || fallback;
+};
 
 export const getAvatar = (index = 0) =>
   defaultAvatars[index % defaultAvatars.length];

@@ -2,7 +2,7 @@ import ServerStatus from "@/components/right-panel/ServerStatus";
 import Messages from "@/components/right-panel/Messages";
 import Contacts from "@/components/right-panel/Contacts";
 
-import styles from "./RightPanel.module.css";
+import styles from "./RightPanel.module.scss";
 
 export default function RightPanel() {
   return (

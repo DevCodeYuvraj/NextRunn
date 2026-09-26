@@ -2,7 +2,7 @@
 
 import ScheduleCard from "./ScheduleCard";
 
-import styles from "./ScheduleDetails.module.css";
+import styles from "./ScheduleDetails.module.scss";
 
 const INITIAL_VISIBLE = 4;
 

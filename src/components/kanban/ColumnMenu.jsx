@@ -7,7 +7,7 @@ import {
   MdDelete,
 } from "react-icons/md";
 
-import styles from "./ColumnMenu.module.css";
+import styles from "./ColumnMenu.module.scss";
 
 export default function ColumnMenu({
   onRename,

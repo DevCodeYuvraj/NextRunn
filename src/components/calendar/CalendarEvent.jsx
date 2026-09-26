@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./CalendarEvent.module.css";
+import styles from "./CalendarEvent.module.scss";
 
 const DAY_MS =
   24 * 60 * 60 * 1000;

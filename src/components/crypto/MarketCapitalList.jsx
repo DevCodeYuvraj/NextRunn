@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./MarketCapitalList.module.css";
+import styles from "./MarketCapitalList.module.scss";
 import MarketCapitalRow from "./MarketCapitalRow";
 
 const markets = [

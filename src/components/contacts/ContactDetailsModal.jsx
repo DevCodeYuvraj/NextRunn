@@ -13,7 +13,8 @@ import {
   MdLanguage,
 } from "react-icons/md";
 
-import styles from "./ContactDetailsModal.module.css";
+import { resolveAvatarSrc } from "@/data/avatarRegistry";
+import styles from "./ContactDetailsModal.module.scss";
 
 export default function ContactDetailsModal({
   open,
@@ -23,6 +24,8 @@ export default function ContactDetailsModal({
   onDelete,
 }) {
   if (!open || !contact) return null;
+
+  const avatarSrc = resolveAvatarSrc(contact.image, null);
 
   return (
     <div
@@ -50,13 +53,14 @@ export default function ContactDetailsModal({
         </div>
 
         <div className={styles.profile}>
-          {contact.image ? (
+          {avatarSrc ? (
             <Image
-              src={contact.image}
+              src={avatarSrc}
               alt={contact.name}
               width={120}
               height={120}
               className={styles.avatar}
+              unoptimized
             />
           ) : (
             <div

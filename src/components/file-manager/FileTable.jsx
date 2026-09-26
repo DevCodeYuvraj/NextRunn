@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import FileRow from "./FileRow";
 
-import styles from "./FileTable.module.css";
+import styles from "./FileTable.module.scss";
 
 export default function FileTable({
   files,

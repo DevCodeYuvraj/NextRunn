@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./MarketOverview.module.css";
+import styles from "./MarketOverview.module.scss";
 import MarketChart from "./MarketChart";
 
 export default function MarketOverview() {

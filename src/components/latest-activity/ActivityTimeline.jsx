@@ -2,7 +2,7 @@
 
 import ActivityItem from "./ActivityItem";
 
-import styles from "./ActivityTimeline.module.css";
+import styles from "./ActivityTimeline.module.scss";
 
 export default function ActivityTimeline({
   activities,

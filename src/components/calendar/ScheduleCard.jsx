@@ -6,7 +6,7 @@ import {
   MdAccessTime,
 } from "react-icons/md";
 
-import styles from "./ScheduleCard.module.css";
+import styles from "./ScheduleCard.module.scss";
 
 function formatDate(value) {
   const [year, month, day] =

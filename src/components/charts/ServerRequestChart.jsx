@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import styles from "./ServerRequestChart.module.css";
+import styles from "./ServerRequestChart.module.scss";
 
 const serverData = [
   { time: "14.10", serverA: 10, serverB: 12 },

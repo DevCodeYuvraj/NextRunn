@@ -9,7 +9,7 @@ import {
   MdClose,
 } from "react-icons/md";
 
-import styles from "./EditTaskModal.module.css";
+import styles from "./EditTaskModal.module.scss";
 
 export default function EditTaskModal({
   task,

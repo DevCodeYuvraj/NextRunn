@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./TrendingCoins.module.css";
+import styles from "./TrendingCoins.module.scss";
 
 const trendingCoins = [
   {

@@ -6,7 +6,7 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import ReviewCard from "@/components/cards/ReviewCard";
 import { reviews } from "@/data/reviews";
 
-import styles from "./ReviewsSection.module.css";
+import styles from "./ReviewsSection.module.scss";
 
 const REVIEWS_PER_PAGE = 3;
 

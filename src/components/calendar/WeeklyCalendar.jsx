@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./WeeklyCalendar.module.css";
+import styles from "./WeeklyCalendar.module.scss";
 
 const DAYS = [
   "Sunday",

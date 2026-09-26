@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { MdClose, MdSend } from "react-icons/md";
 
-import styles from "./ComposeModal.module.css";
+import styles from "./ComposeModal.module.scss";
 
 export default function ComposeModal({
   open,

@@ -7,7 +7,7 @@ import {
 
 import MessageBubble from "./MessageBubble";
 
-import styles from "./MessageList.module.css";
+import styles from "./MessageList.module.scss";
 
 export default function MessageList({
   messages,

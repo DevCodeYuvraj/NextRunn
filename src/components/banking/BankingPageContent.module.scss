@@ -1,0 +1,80 @@
+@use "../../styles/abstracts" as *;
+
+.page {
+  width: 100%;
+  min-width: 0;
+  @include flex(flex-start, stretch, column, nowrap, 30px);
+
+  @include respond(lg) {
+    gap: 24px;
+  }
+
+  @include respond(md) {
+    gap: 20px;
+  }
+
+  @include respond(xs) {
+    gap: 16px;
+  }
+}
+
+/* =========================
+   TOP GRID
+========================= */
+
+.topGrid {
+  width: 100%;
+  @include grid(minmax(0, 1fr) minmax(0, 1fr) 330px, 30px);
+  align-items: stretch;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    > :last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @include respond(lg) {
+    gap: 24px;
+  }
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    > :last-child {
+      grid-column: auto;
+    }
+  }
+
+  @include respond(xs) {
+    gap: 16px;
+  }
+}
+
+/* =========================
+   BOTTOM GRID
+========================= */
+
+.bottomGrid {
+  width: 100%;
+  @include grid(minmax(0, 2fr) 330px, 30px);
+  align-items: stretch;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(lg) {
+    gap: 24px;
+  }
+
+  @include respond(md) {
+    gap: 20px;
+  }
+
+  @include respond(xs) {
+    gap: 16px;
+  }
+}

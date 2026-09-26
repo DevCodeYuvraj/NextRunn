@@ -3,7 +3,7 @@
 "use client";
 
 import { MdCreditCard } from "react-icons/md";
-import styles from "./PreviewCard.module.css";
+import styles from "./PreviewCard.module.scss";
 
 export default function PreviewCard() {
   return (

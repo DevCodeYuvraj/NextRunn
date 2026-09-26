@@ -10,7 +10,7 @@ import {
   currencies,
 } from "@/data/invoiceData";
 
-import styles from "./SendInvoiceCard.module.css";
+import styles from "./SendInvoiceCard.module.scss";
 
 export default function SendInvoiceCard() {
   const [recipient, setRecipient] =

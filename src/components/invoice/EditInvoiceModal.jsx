@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 
-import styles from "./EditInvoiceModal.module.css";
+import styles from "./EditInvoiceModal.module.scss";
 
 export default function EditInvoiceModal({
   open,

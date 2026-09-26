@@ -22,7 +22,7 @@ import {
   userProfile,
 } from "@/data/userData";
 
-import styles from "./UserProfileCard.module.css";
+import styles from "./UserProfileCard.module.scss";
 
 export default function UserProfileCard() {
   const [menuOpen, setMenuOpen] =

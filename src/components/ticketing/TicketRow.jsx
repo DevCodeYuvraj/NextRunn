@@ -5,7 +5,7 @@ import { useAvatarContext } from "@/context/AvatarContext";
 
 import TicketStatusBadge from "./TicketStatusBadge";
 
-import styles from "./TicketRow.module.css";
+import styles from "./TicketRow.module.scss";
 
 export default function TicketRow({
   ticket,

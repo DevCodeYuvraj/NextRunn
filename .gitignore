@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+nul.map
+nul
+src/app/globals.scss
+src/app/(dashboard)/dashboard/layout.module.scss

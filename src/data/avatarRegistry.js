@@ -3,6 +3,7 @@ import {
   getAvatar,
   getAvatarById,
   getRandomAvatar,
+  resolveAvatarSrc,
 } from "./avatarData";
 
 export {
@@ -10,4 +11,5 @@ export {
   getAvatar,
   getAvatarById,
   getRandomAvatar,
+  resolveAvatarSrc,
 };

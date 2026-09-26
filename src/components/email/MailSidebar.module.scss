@@ -1,0 +1,195 @@
+@use "../../styles/abstracts" as *;
+
+.mailSidebar {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 28px 24px;
+  background: $white;
+  border-right: 1px solid #edf0f6;
+
+  @include respond(lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    max-width: 85vw;
+    height: 100vh;
+    z-index: 1100;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.18);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    @include scrollbar(4px);
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.mobileHeader {
+  display: none;
+
+  @include respond(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: $weight-bold;
+      color: #202224;
+    }
+  }
+}
+
+.closeButton {
+  @include size(34px);
+  @include flex(center, center);
+  border: 0;
+  border-radius: 8px;
+  background: #f4f6fa;
+  color: #64748b;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: #eaedf4;
+    color: #202224;
+  }
+}
+
+.newMessageButton {
+  width: 100%;
+  height: 48px;
+  @include flex(center, center, row, nowrap, 10px);
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 8px;
+  background: #4b46e5;
+  color: $white;
+  font-size: 13px;
+  font-weight: $weight-medium;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: #3f39d4;
+    transform: translateY(-1px);
+  }
+}
+
+.folderNavigation {
+  @include flex(flex-start, stretch, column, nowrap, 2px);
+}
+
+.folderItem {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  @include flex(space-between, center);
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #929bad;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: #f5f6ff;
+    color: #4b46e5;
+  }
+
+  &.activeFolder {
+    background: #f5f6ff;
+    color: #4b46e5;
+    font-weight: $weight-semibold;
+  }
+}
+
+.folderInfo {
+  @include flex(flex-start, center, row, nowrap, 12px);
+}
+
+.folderCount {
+  @include size(24px);
+  @include flex(center, center);
+  border-radius: 7px;
+  background: #16c7e9;
+  color: $white;
+  font-size: 10px;
+  font-weight: $weight-semibold;
+}
+
+.labelsSection {
+  margin-top: 28px;
+}
+
+.labelsHeader {
+  margin-bottom: 10px;
+  padding: 0 14px;
+  @include flex(space-between, center);
+  color: #b0b7c5;
+  font-size: 11px;
+}
+
+.moreButton {
+  padding: 0;
+  @include flex(center, center);
+  border: none;
+  background: transparent;
+  color: #929bad;
+  cursor: pointer;
+}
+
+.labelsList {
+  @include flex(flex-start, stretch, column, nowrap, 2px);
+}
+
+.labelItem,
+.addLabelButton {
+  width: 100%;
+  height: 38px;
+  padding: 0 14px;
+  @include flex(flex-start, center, row, nowrap, 11px);
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #929bad;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    color: #4b46e5;
+    background: #f8f9fe;
+  }
+
+  &.activeLabel {
+    background: #f5f6ff;
+    color: #4b46e5;
+    font-weight: $weight-semibold;
+  }
+}
+
+.pink {
+  color: #ed2ca9;
+}
+
+.cyan {
+  color: #08bfe5;
+}
+
+.blue {
+  color: #4b46e5;
+}
+
+.purple {
+  color: #7524c8;
+}

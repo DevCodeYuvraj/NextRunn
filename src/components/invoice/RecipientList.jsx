@@ -4,7 +4,7 @@ import Avatar from "@/components/common/Avatar";
 
 import { recentRecipients } from "@/data/invoiceData";
 
-import styles from "./RecipientList.module.css";
+import styles from "./RecipientList.module.scss";
 
 export default function RecipientList() {
   return (

@@ -10,7 +10,7 @@ import {
   MdPerson,
 } from "react-icons/md";
 
-import styles from "./LoginPageContent.module.css";
+import styles from "./LoginPageContent.module.scss";
 
 export default function LoginPageContent() {
   const router = useRouter();

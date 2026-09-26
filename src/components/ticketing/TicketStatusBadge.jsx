@@ -6,7 +6,7 @@ import {
   MdArrowCircleRight,
 } from "react-icons/md";
 
-import styles from "./TicketStatusBadge.module.css";
+import styles from "./TicketStatusBadge.module.scss";
 
 const STATUS_CONFIG = {
   Paid: {

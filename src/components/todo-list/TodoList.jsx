@@ -2,7 +2,7 @@
 
 import TodoRow from "./TodoRow";
 
-import styles from "./TodoList.module.css";
+import styles from "./TodoList.module.scss";
 
 export default function TodoList({
   tasks,

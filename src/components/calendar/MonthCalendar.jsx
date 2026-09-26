@@ -10,7 +10,7 @@ import {
 
 import CalendarDay from "./CalendarDay";
 
-import styles from "./MonthCalendar.module.css";
+import styles from "./MonthCalendar.module.scss";
 
 function formatDateKey(date) {
   const year =

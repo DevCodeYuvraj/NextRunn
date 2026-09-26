@@ -9,7 +9,7 @@ import RenameColumnModal from "./RenameColumnModal";
 import DeleteConfirmModal from "./DeleteConfirmModal";
 import KanbanColumn from "./KanbanColumn";
 
-import styles from "./KanbanBoard.module.css";
+import styles from "./KanbanBoard.module.scss";
 
 export default function KanbanBoard() {
   const [columns, setColumns] = useState(initialColumns);

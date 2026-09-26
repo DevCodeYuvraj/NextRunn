@@ -3,7 +3,7 @@
 import Avatar from "@/components/common/Avatar";
 import { useAvatarContext } from "@/context/AvatarContext";
 
-import styles from "./UserMessageRow.module.css";
+import styles from "./UserMessageRow.module.scss";
 
 export default function UserMessageRow({
   message,

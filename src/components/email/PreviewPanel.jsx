@@ -22,18 +22,38 @@ import {
   MdImage,
   MdMoreHoriz,
   MdSend,
+  MdArrowBack,
 } from "react-icons/md";
 
-import styles from "./PreviewPanel.module.css";
+import styles from "./PreviewPanel.module.scss";
 
-export default function PreviewPanel({ mail }) {
+export default function PreviewPanel({
+  mail,
+  onBack,
+  isMobileActive = false,
+}) {
   const [reply, setReply] = useState("");
 
   if (!mail) {
     return (
-      <aside className={styles.previewPanel}>
+      <aside
+        className={`${styles.previewPanel} ${
+          isMobileActive ? styles.mobileActive : styles.mobileHidden
+        }`}
+      >
         <div className={styles.previewTop}>
           <div>
+            {onBack && (
+              <button
+                type="button"
+                className={styles.backButton}
+                onClick={onBack}
+              >
+                <MdArrowBack size={18} />
+                <span>Back to emails</span>
+              </button>
+            )}
+
             <h2 className={styles.previewTitle}>
               Preview
             </h2>
@@ -51,12 +71,29 @@ export default function PreviewPanel({ mail }) {
     if (!reply.trim()) return;
 
     console.log("Reply:", reply);
-
     setReply("");
   }
 
   return (
-    <aside className={styles.previewPanel}>
+    <aside
+      className={`${styles.previewPanel} ${
+        isMobileActive ? styles.mobileActive : styles.mobileHidden
+      }`}
+    >
+      {/* Mobile Back Navigation */}
+      {onBack && (
+        <div className={styles.mobileBackRow}>
+          <button
+            type="button"
+            className={styles.backButton}
+            onClick={onBack}
+          >
+            <MdArrowBack size={18} />
+            <span>Back to emails</span>
+          </button>
+        </div>
+      )}
+
       {/* ================= HEADER ================= */}
 
       <div className={styles.previewTop}>
@@ -72,15 +109,19 @@ export default function PreviewPanel({ mail }) {
         </div>
 
         <div className={styles.topActions}>
-          <button type="button">
+          <button type="button" aria-label="Delete email">
             <MdDelete />
           </button>
 
-          <button type="button">
+          <button type="button" aria-label="Fullscreen">
             <MdFullscreen />
           </button>
 
-          <button type="button">
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={onBack}
+          >
             <MdCancel />
           </button>
         </div>
@@ -98,7 +139,6 @@ export default function PreviewPanel({ mail }) {
             }`}
           >
             <MdBookmark size={13} />
-
             <span>{mail.badge}</span>
           </div>
         ) : (
@@ -106,17 +146,13 @@ export default function PreviewPanel({ mail }) {
         )}
 
         <div className={styles.labelActions}>
-          <button type="button">
+          <button type="button" aria-label="Info">
             <MdInfo />
           </button>
 
-          <button type="button">
+          <button type="button" aria-label="Star">
             <MdStar
-              color={
-                mail.starred
-                  ? "#FFC107"
-                  : "#BFC8D7"
-              }
+              color={mail.starred ? "#FFC107" : "#BFC8D7"}
             />
           </button>
         </div>
@@ -145,7 +181,6 @@ export default function PreviewPanel({ mail }) {
 
         <div className={styles.senderDetails}>
           <h4>{mail.sender}</h4>
-
           <p>{mail.email}</p>
         </div>
       </div>
@@ -174,33 +209,33 @@ export default function PreviewPanel({ mail }) {
 
           <div className={styles.formatToolbar}>
             <div className={styles.textTools}>
-              <button type="button">
+              <button type="button" aria-label="Bold">
                 <MdFormatBold />
               </button>
 
-              <button type="button">
+              <button type="button" aria-label="Italic">
                 <MdFormatItalic />
               </button>
 
-              <button type="button">
+              <button type="button" aria-label="Underline">
                 <MdFormatUnderlined />
               </button>
 
-              <button type="button">
+              <button type="button" aria-label="Font size">
                 <MdFormatSize />
               </button>
             </div>
 
             <div className={styles.alignTools}>
-              <button type="button">
+              <button type="button" aria-label="Align left">
                 <MdFormatAlignLeft />
               </button>
 
-              <button type="button">
+              <button type="button" aria-label="Align center">
                 <MdFormatAlignCenter />
               </button>
 
-              <button type="button">
+              <button type="button" aria-label="Align right">
                 <MdFormatAlignRight />
               </button>
             </div>
@@ -209,15 +244,15 @@ export default function PreviewPanel({ mail }) {
 
         <div className={styles.sendToolbar}>
           <div className={styles.attachmentTools}>
-            <button type="button">
+            <button type="button" aria-label="Attach file">
               <MdAttachFile />
             </button>
 
-            <button type="button">
+            <button type="button" aria-label="Attach image">
               <MdImage />
             </button>
 
-            <button type="button">
+            <button type="button" aria-label="More">
               <MdMoreHoriz />
             </button>
           </div>
@@ -228,7 +263,6 @@ export default function PreviewPanel({ mail }) {
             onClick={handleSend}
           >
             <span>Send</span>
-
             <MdSend />
           </button>
         </div>

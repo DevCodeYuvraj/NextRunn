@@ -2,7 +2,7 @@
 
 import CalendarEvent from "./CalendarEvent";
 
-import styles from "./CalendarDay.module.css";
+import styles from "./CalendarDay.module.scss";
 
 export default function CalendarDay({
   day,

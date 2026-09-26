@@ -11,7 +11,7 @@ import {
   resizeImage,
 } from "@/lib/imageUtils";
 
-import styles from "./AvatarUpload.module.css";
+import styles from "./AvatarUpload.module.scss";
 
 export default function AvatarUpload({
   image,

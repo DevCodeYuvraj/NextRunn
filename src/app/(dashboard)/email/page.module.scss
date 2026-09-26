@@ -1,0 +1,44 @@
+@use "../../../styles/abstracts" as *;
+
+.emailPage {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 86px);
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 320px;
+  background: #f5f7fb;
+  border-radius: 16px;
+  overflow: hidden;
+
+  @include respond(xl) {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  @include respond(lg) {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 12px;
+  }
+}
+
+.backdrop {
+  display: none;
+
+  @include respond(lg) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 1050;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &.backdropActive {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

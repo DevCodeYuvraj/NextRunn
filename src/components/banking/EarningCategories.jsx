@@ -6,7 +6,7 @@ import {
   earningCategories,
 } from "@/data/bankingData";
 
-import styles from "./EarningCategories.module.css";
+import styles from "./EarningCategories.module.scss";
 
 export default function EarningCategories() {
   const [expanded, setExpanded] =

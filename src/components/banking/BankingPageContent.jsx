@@ -10,7 +10,7 @@ import {
   expenseChart,
 } from "@/data/bankingData";
 
-import styles from "./BankingPageContent.module.css";
+import styles from "./BankingPageContent.module.scss";
 
 export default function BankingPageContent() {
   return (

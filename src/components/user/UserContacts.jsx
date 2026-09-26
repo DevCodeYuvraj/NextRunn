@@ -6,7 +6,7 @@ import { MdAdd } from "react-icons/md";
 import UserContactRow from "./UserContactRow";
 import AddContactModal from "./AddContactModal";
 
-import styles from "./UserContacts.module.css";
+import styles from "./UserContacts.module.scss";
 
 const INITIAL_VISIBLE = 5;
 

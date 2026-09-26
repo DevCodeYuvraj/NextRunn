@@ -1,7 +1,7 @@
 import VisitorsChart from "@/components/charts/VisitorsChart";
 import DeviceChart from "@/components/charts/DeviceChart";
 
-import styles from "./AnalyticsSection.module.css";
+import styles from "./AnalyticsSection.module.scss";
 
 export default function AnalyticsSection() {
   return (

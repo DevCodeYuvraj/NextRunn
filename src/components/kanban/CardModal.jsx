@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./CardModal.module.css";
+import styles from "./CardModal.module.scss";
 
 const emptyCard = {
   title: "",

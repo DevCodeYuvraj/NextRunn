@@ -14,7 +14,7 @@ import {
   MdDeleteOutline,
 } from "react-icons/md";
 
-import styles from "./FileActionMenu.module.css";
+import styles from "./FileActionMenu.module.scss";
 
 export default function FileActionMenu({
   file,

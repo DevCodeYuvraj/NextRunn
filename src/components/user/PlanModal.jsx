@@ -2,7 +2,7 @@
 
 import { MdClose, MdStar } from "react-icons/md";
 
-import styles from "./PlanModal.module.css";
+import styles from "./PlanModal.module.scss";
 
 export default function PlanModal({
   open,

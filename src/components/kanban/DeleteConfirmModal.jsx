@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./DeleteConfirmModal.module.css";
+import styles from "./DeleteConfirmModal.module.scss";
 
 export default function DeleteConfirmModal({
   open,

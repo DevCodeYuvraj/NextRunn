@@ -5,7 +5,7 @@ import { MdAdd, MdMoreHoriz } from "react-icons/md";
 
 import ColumnMenu from "./ColumnMenu";
 import TaskCard from "./TaskCard";
-import styles from "./KanbanColumn.module.css";
+import styles from "./KanbanColumn.module.scss";
 
 function KanbanColumn({
   column,

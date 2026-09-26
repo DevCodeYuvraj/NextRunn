@@ -4,7 +4,7 @@ import ConversationHeader from "./ConversationHeader";
 import MessageList from "./MessageList";
 import MessageComposer from "./MessageComposer";
 
-import styles from "./Conversation.module.css";
+import styles from "./Conversation.module.scss";
 
 export default function Conversation({
   chat,

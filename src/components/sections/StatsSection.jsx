@@ -1,7 +1,7 @@
 import StatsCard from "@/components/cards/StatsCard";
 import { stats } from "@/data/stats";
 
-import styles from "./StatsSection.module.css";
+import styles from "./StatsSection.module.scss";
 
 export default function StatsSection() {
   return (

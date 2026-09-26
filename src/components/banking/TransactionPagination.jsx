@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./TransactionPagination.module.css";
+import styles from "./TransactionPagination.module.scss";
 
 export default function TransactionPagination({
   currentPage,

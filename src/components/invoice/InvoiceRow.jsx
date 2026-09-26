@@ -5,7 +5,7 @@ import Avatar from "@/components/common/Avatar";
 import StatusBadge from "./StatusBadge";
 import ActionMenu from "./ActionMenu";
 
-import styles from "./InvoiceRow.module.css";
+import styles from "./InvoiceRow.module.scss";
 
 export default function InvoiceRow({
   invoice,

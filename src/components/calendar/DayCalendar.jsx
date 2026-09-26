@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./DayCalendar.module.css";
+import styles from "./DayCalendar.module.scss";
 
 function dateKey(date) {
   const year = date.getFullYear();

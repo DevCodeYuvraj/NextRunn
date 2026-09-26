@@ -7,7 +7,7 @@ import {
 
 import StatusBadge from "./StatusBadge";
 
-import styles from "./InvoiceDetailsModal.module.css";
+import styles from "./InvoiceDetailsModal.module.scss";
 
 export default function InvoiceDetailsModal({
   open,

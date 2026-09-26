@@ -15,7 +15,7 @@ import {
   initialUserMessages,
 } from "@/data/userData";
 
-import styles from "./UserPageContent.module.css";
+import styles from "./UserPageContent.module.scss";
 
 export default function UserPageContent() {
   const [contacts, setContacts] =

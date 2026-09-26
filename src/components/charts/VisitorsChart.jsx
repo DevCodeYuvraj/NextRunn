@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import styles from "./VisitorsChart.module.css";
+import styles from "./VisitorsChart.module.scss";
 
 const visitorsData = [
   { day: "Mon", lastWeek: 55, thisWeek: 72 },

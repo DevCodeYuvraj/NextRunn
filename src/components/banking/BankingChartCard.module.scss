@@ -1,0 +1,346 @@
+@use "../../styles/abstracts" as *;
+
+/* =========================
+   CARD ROOT & VARIANTS
+========================= */
+
+.card {
+  width: 100%;
+  min-width: 0;
+  min-height: 330px;
+  padding: 28px 28px 24px;
+  border-radius: $radius-2xl;
+  background: $white;
+  box-shadow: 0 10px 35px rgba(28, 39, 49, 0.035);
+  transition: box-shadow 0.2s ease;
+
+  @include respond(lg) {
+    padding: 24px 22px 20px;
+  }
+
+  @include respond(md) {
+    min-height: 310px;
+    padding: 20px 18px 18px;
+    border-radius: $radius-xl;
+  }
+
+  @include respond(xs) {
+    min-height: 290px;
+    padding: 16px 14px 14px;
+    border-radius: $radius-lg;
+  }
+
+  &.incomeCard {
+    .sparkline polyline {
+      stroke: #31d266;
+    }
+
+    .bar {
+      background: #10c7e9;
+    }
+  }
+
+  &.expenseCard {
+    .sparkline polyline {
+      stroke: #f21e1e;
+    }
+
+    .bar {
+      background: #3549d8;
+    }
+  }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  @include flex(space-between, flex-start, row, nowrap, 16px);
+  margin-bottom: 14px;
+
+  @include respond(md) {
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  @include respond(xs) {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+}
+
+.overview {
+  min-width: 0;
+
+  h3 {
+    margin: 0 0 8px;
+    color: #202224;
+    font-size: 18px;
+    font-weight: $weight-bold;
+    line-height: 1.25;
+
+    @include respond(md) {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    @include respond(xs) {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+/* =========================
+   SPARKLINE
+========================= */
+
+.sparkline {
+  @include size(100px, 52px);
+  display: block;
+  overflow: visible;
+
+  @include respond(md) {
+    @include size(90px, 46px);
+  }
+
+  @include respond(xs) {
+    @include size(80px, 40px);
+  }
+
+  polyline {
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+  @include flex(flex-start, center, row, nowrap, 12px);
+  padding-top: 35px;
+  white-space: nowrap;
+
+  @include respond(md) {
+    padding-top: 26px;
+    gap: 8px;
+  }
+
+  @include respond(xs) {
+    padding-top: 18px;
+    gap: 6px;
+  }
+
+  strong {
+    color: #202224;
+    font-size: 25px;
+    font-weight: $weight-bold;
+    line-height: 1;
+
+    @include respond(md) {
+      font-size: 20px;
+    }
+
+    @include respond(xs) {
+      font-size: 17px;
+    }
+  }
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: $weight-semibold;
+
+  @include respond(xs) {
+    font-size: 10px;
+  }
+
+  svg {
+    @include size(18px);
+    margin-right: -3px;
+
+    @include respond(xs) {
+      @include size(15px);
+      margin-right: -2px;
+    }
+  }
+
+  &.positive {
+    color: #2fd565;
+  }
+
+  &.negative {
+    color: #f21e1e;
+  }
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chartArea {
+  height: 190px;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 6px;
+
+  @include respond(md) {
+    height: 180px;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  @include respond(xs) {
+    height: 165px;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 3px;
+  }
+}
+
+/* Y Axis */
+
+.yAxis {
+  height: 160px;
+  @include flex(space-between, stretch, column);
+  padding-top: 1px;
+  color: #a1a8b4;
+  font-size: 10px;
+
+  @include respond(md) {
+    height: 150px;
+    font-size: 9px;
+  }
+
+  @include respond(xs) {
+    height: 138px;
+    font-size: 8px;
+  }
+}
+
+/* Main chart */
+
+.chart {
+  position: relative;
+  min-width: 0;
+  height: 190px;
+
+  @include respond(md) {
+    height: 180px;
+  }
+
+  @include respond(xs) {
+    height: 165px;
+  }
+}
+
+.gridLines {
+  @include absolute(0, 0, auto, 0);
+  height: 160px;
+  @include flex(space-between, stretch, column);
+  pointer-events: none;
+
+  @include respond(md) {
+    height: 150px;
+  }
+
+  @include respond(xs) {
+    height: 138px;
+  }
+
+  span {
+    width: 100%;
+    border-top: 1px dashed #edf0f4;
+  }
+}
+
+/* Bars */
+
+.bars {
+  position: relative;
+  z-index: 1;
+  height: 190px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+
+  @include respond(md) {
+    height: 180px;
+    gap: 6px;
+  }
+
+  @include respond(xs) {
+    height: 165px;
+    gap: 4px;
+  }
+}
+
+.barGroup {
+  min-width: 0;
+  height: 190px;
+  @include flex(flex-start, center, column);
+
+  @include respond(md) {
+    height: 180px;
+  }
+
+  @include respond(xs) {
+    height: 165px;
+  }
+}
+
+.barTrack {
+  width: 100%;
+  height: 160px;
+  @include flex(center, flex-end);
+
+  @include respond(md) {
+    height: 150px;
+  }
+
+  @include respond(xs) {
+    height: 138px;
+  }
+}
+
+.bar {
+  width: 13px;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  transition: width 0.2s ease;
+
+  @include respond(md) {
+    width: 10px;
+  }
+
+  @include respond(sm) {
+    width: 8px;
+  }
+
+  @include respond(xs) {
+    width: 6px;
+    border-radius: 2px 2px 0 0;
+  }
+}
+
+.day {
+  margin-top: 11px;
+  color: #a1a8b4;
+  font-size: 10px;
+  font-weight: $weight-regular;
+
+  @include respond(md) {
+    margin-top: 8px;
+    font-size: 9px;
+  }
+
+  @include respond(xs) {
+    margin-top: 6px;
+    font-size: 8px;
+  }
+}

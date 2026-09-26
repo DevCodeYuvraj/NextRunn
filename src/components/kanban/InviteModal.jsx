@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./InviteModal.module.css";
+import styles from "./InviteModal.module.scss";
 
 export default function InviteModal({
   open,

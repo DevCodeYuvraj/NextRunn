@@ -5,7 +5,7 @@ import {
   MdCreditCard,
 } from "react-icons/md";
 
-import styles from "./PaymentCard.module.css";
+import styles from "./PaymentCard.module.scss";
 
 export default function PaymentCard() {
   return (

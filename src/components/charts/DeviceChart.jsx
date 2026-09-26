@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import styles from "./DeviceChart.module.css";
+import styles from "./DeviceChart.module.scss";
 
 const deviceData = [
   {

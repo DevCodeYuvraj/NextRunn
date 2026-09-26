@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./BuySellCard.module.css";
+import styles from "./BuySellCard.module.scss";
 import { ChevronDown } from "lucide-react";
 
 export default function BuySellCard() {

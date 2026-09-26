@@ -3,7 +3,7 @@
 import Avatar from "@/components/common/Avatar";
 import { getAvatar } from "@/data/avatarData";
 
-import styles from "./ReviewCard.module.css";
+import styles from "./ReviewCard.module.scss";
 
 export default function ReviewCard({
   name,

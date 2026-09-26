@@ -10,7 +10,7 @@ import {
 import CategoryItem from "./CategoryItem";
 import FolderItem from "./FolderItem";
 
-import styles from "./FileNavigation.module.css";
+import styles from "./FileNavigation.module.scss";
 
 export default function FileNavigation({
   activeCategory,

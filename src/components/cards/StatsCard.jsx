@@ -1,4 +1,4 @@
-import styles from "./StatsCard.module.css";
+import styles from "./StatsCard.module.scss";
 
 export default function StatsCard({
   title,

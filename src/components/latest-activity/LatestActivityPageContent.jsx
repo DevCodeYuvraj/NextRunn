@@ -10,7 +10,7 @@ import {
   activityFilters,
 } from "@/data/activityData";
 
-import styles from "./LatestActivityPageContent.module.css";
+import styles from "./LatestActivityPageContent.module.scss";
 
 export default function LatestActivityPageContent() {
   const [filter, setFilter] = useState("all");

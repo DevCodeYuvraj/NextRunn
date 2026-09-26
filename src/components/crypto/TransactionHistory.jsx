@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./TransactionHistory.module.css";
+import styles from "./TransactionHistory.module.scss";
 import TransactionRow from "./TransactionRow";
 
 const transactions = [

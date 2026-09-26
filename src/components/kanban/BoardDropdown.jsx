@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./BoardDropdown.module.css";
+import styles from "./BoardDropdown.module.scss";
 
 const boards = [
   "Project Board",

@@ -5,7 +5,7 @@ import {
   MdDeleteOutline,
 } from "react-icons/md";
 
-import styles from "./DeleteInvoiceModal.module.css";
+import styles from "./DeleteInvoiceModal.module.scss";
 
 export default function DeleteInvoiceModal({
   open,

@@ -10,7 +10,7 @@ import InvoiceStats from "./InvoiceStats";
 import InvoiceTable from "./InvoiceTable";
 import RightSidebar from "./RightSidebar";
 
-import styles from "./InvoicePageContent.module.css";
+import styles from "./InvoicePageContent.module.scss";
 
 export default function InvoicePageContent() {
   const [invoices, setInvoices] =

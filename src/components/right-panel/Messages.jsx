@@ -6,7 +6,7 @@ import Avatar from "@/components/common/Avatar";
 import { getAvatar } from "@/data/avatarData";
 import { messages } from "@/data/messages";
 
-import styles from "./Messages.module.css";
+import styles from "./Messages.module.scss";
 
 const INITIAL_MESSAGES = 3;
 

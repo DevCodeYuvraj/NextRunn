@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./SummaryCard.module.css";
+import styles from "./SummaryCard.module.scss";
 
 import {
   BitcoinLogo,

@@ -7,7 +7,7 @@ import {
   MdAdd,
 } from "react-icons/md";
 
-import styles from "./ScheduleModal.module.css";
+import styles from "./ScheduleModal.module.scss";
 
 const EMPTY_FORM = {
   title: "",

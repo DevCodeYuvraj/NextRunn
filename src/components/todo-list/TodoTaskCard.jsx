@@ -8,7 +8,7 @@ import {
 import TodoLabel from "./TodoLabel";
 import TodoActionMenu from "./TodoActionMenu";
 
-import styles from "./TodoTaskCard.module.css";
+import styles from "./TodoTaskCard.module.scss";
 
 export default function TodoTaskCard({
   task,

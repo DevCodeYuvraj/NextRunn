@@ -9,7 +9,7 @@ import {
   MdArrowDropDown,
 } from "react-icons/md";
 
-import styles from "./InvoiceStats.module.css";
+import styles from "./InvoiceStats.module.scss";
 
 const stats = [
   {

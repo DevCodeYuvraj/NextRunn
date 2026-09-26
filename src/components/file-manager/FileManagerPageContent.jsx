@@ -11,7 +11,7 @@ import {
   initialFiles,
 } from "@/data/fileManagerData";
 
-import styles from "./FileManagerPageContent.module.css";
+import styles from "./FileManagerPageContent.module.scss";
 
 export default function FileManagerPageContent() {
   const [activeCategory, setActiveCategory] =

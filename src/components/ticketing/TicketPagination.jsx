@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./TicketPagination.module.css";
+import styles from "./TicketPagination.module.scss";
 
 export default function TicketPagination({
   currentPage,

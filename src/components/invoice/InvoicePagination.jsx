@@ -5,7 +5,7 @@ import {
   MdKeyboardArrowRight,
 } from "react-icons/md";
 
-import styles from "./InvoicePagination.module.css";
+import styles from "./InvoicePagination.module.scss";
 
 export default function InvoicePagination({
   currentPage,

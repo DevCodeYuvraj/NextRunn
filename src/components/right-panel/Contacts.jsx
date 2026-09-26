@@ -7,7 +7,7 @@ import Avatar from "@/components/common/Avatar";
 import { getAvatarById } from "@/data/avatarData";
 import { initialContacts as contacts } from "@/data/contacts";
 
-import styles from "./Contacts.module.css";
+import styles from "./Contacts.module.scss";
 
 const INITIAL_CONTACTS = 4;
 

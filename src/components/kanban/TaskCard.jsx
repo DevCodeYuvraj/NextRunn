@@ -13,7 +13,7 @@ import {
   MdDelete,
 } from "react-icons/md";
 
-import styles from "./TaskCard.module.css";
+import styles from "./TaskCard.module.scss";
 
 const priorityClass = {
   High: styles.high,

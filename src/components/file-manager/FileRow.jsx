@@ -10,7 +10,7 @@ import {
 
 import FileActionMenu from "./FileActionMenu";
 
-import styles from "./FileRow.module.css";
+import styles from "./FileRow.module.scss";
 
 const FILE_ICONS = {
   folder: MdFolder,

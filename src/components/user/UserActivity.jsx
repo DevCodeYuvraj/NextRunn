@@ -4,7 +4,7 @@ import {
   userActivities,
 } from "@/data/userData";
 
-import styles from "./UserActivity.module.css";
+import styles from "./UserActivity.module.scss";
 
 export default function UserActivity() {
   return (

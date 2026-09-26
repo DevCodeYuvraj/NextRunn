@@ -10,7 +10,7 @@ import {
   MdPrint,
 } from "react-icons/md";
 
-import styles from "./TransactionReceiptModal.module.css";
+import styles from "./TransactionReceiptModal.module.scss";
 
 export default function TransactionReceiptModal({
   open,

@@ -13,7 +13,7 @@ import TransactionRow from "./TransactionRow";
 import TransactionPagination from "./TransactionPagination";
 import TransactionReceiptModal from "./TransactionReceiptModal";
 
-import styles from "./TransactionTable.module.css";
+import styles from "./TransactionTable.module.scss";
 
 const ITEMS_PER_PAGE = 5;
 

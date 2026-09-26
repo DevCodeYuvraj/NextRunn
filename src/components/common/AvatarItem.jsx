@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import styles from "./AvatarItem.module.css";
+import styles from "./AvatarItem.module.scss";
 
 export default function AvatarItem({
   avatar,
@@ -23,6 +23,7 @@ export default function AvatarItem({
         width={64}
         height={64}
         className={styles.image}
+        unoptimized
       />
 
       {selected && (

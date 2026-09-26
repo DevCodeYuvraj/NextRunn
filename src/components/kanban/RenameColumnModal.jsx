@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./RenameColumnModal.module.css";
+import styles from "./RenameColumnModal.module.scss";
 
 export default function RenameColumnModal({
   open,

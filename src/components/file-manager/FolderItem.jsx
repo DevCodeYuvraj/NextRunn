@@ -2,7 +2,7 @@
 
 import { MdFolder } from "react-icons/md";
 
-import styles from "./FolderItem.module.css";
+import styles from "./FolderItem.module.scss";
 
 export default function FolderItem({
   folder,

@@ -4,7 +4,7 @@ import { MdAdd, MdSearch } from "react-icons/md";
 import { useAvatarContext } from "@/context/AvatarContext";
 import ChatContact from "./ChatContact";
 
-import styles from "./ChatSidebar.module.css";
+import styles from "./ChatSidebar.module.scss";
 
 const INITIAL_CHAT_COUNT = 3;
 export default function ChatSidebar({

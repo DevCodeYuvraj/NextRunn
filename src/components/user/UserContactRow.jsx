@@ -5,7 +5,7 @@ import { useAvatarContext } from "@/context/AvatarContext";
 
 import { MdEmail } from "react-icons/md";
 
-import styles from "./UserContactRow.module.css";
+import styles from "./UserContactRow.module.scss";
 
 export default function UserContactRow({
   contact,

@@ -21,7 +21,7 @@ import {
 
 import { initialNotifications } from "@/data/notificationData";
 
-import styles from "./NotificationDropdown.module.css";
+import styles from "./NotificationDropdown.module.scss";
 
 const notificationIcons = {
   invoice: MdDescription,

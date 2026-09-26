@@ -5,7 +5,7 @@ import {
   MdSearch,
 } from "react-icons/md";
 
-import styles from "./FileToolbar.module.css";
+import styles from "./FileToolbar.module.scss";
 
 export default function FileToolbar({
   activeFolder,

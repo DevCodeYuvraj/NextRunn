@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./CryptoPageContent.module.css";
+import styles from "./CryptoPageContent.module.scss";
 
 import SummaryCards from "./SummaryCards";
 import MarketOverview from "./MarketOverview";

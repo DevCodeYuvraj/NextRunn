@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./WalletCard.module.css";
+import styles from "./WalletCard.module.scss";
 import { ArrowDownLeft, ArrowUpRight, Wallet } from "lucide-react";
 
 export default function WalletCard() {

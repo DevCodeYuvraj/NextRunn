@@ -13,7 +13,7 @@ import ContactFormModal from "./ContactFormModal";
 import ContactDetailsModal from "./ContactDetailsModal";
 import DeleteContactModal from "./DeleteContactModal";
 
-import styles from "./ContactList.module.css";
+import styles from "./ContactList.module.scss";
 
 const PAGE_SIZE = 12;
 
@@ -255,6 +255,9 @@ function handleFavourite(id) {
               }
               onDelete={
                 handleDelete
+              }
+              onFavourite={
+                handleFavourite
               }
             />
           )

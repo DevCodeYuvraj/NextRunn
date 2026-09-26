@@ -2,7 +2,7 @@ import {
   MdLabel,
 } from "react-icons/md";
 
-import styles from "./TodoLabel.module.css";
+import styles from "./TodoLabel.module.scss";
 
 export default function TodoLabel({
   priority,

@@ -1,0 +1,59 @@
+@use "../../styles/abstracts" as *;
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  @include size(28px);
+  @include flex(center, center);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #9da5b1;
+  font-size: 19px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #3549d8;
+  }
+}
+
+.menu {
+  @include absolute(31px, 0);
+  z-index: 50;
+  width: 135px;
+  padding: 6px;
+  border: 1px solid #edf0f4;
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 12px 30px rgba(30, 34, 40, 0.11);
+
+  button {
+    width: 100%;
+    height: 35px;
+    @include flex(flex-start, center, row, nowrap, 8px);
+    padding: 0 9px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #717986;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background: #f4f5ff;
+      color: #3549d8;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+}

@@ -8,7 +8,7 @@ import {
   MdClose,
 } from "react-icons/md";
 
-import styles from "./NewTaskModal.module.css";
+import styles from "./NewTaskModal.module.scss";
 
 const INITIAL_FORM = {
   title: "",

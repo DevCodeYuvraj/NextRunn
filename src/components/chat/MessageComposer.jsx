@@ -11,7 +11,7 @@ import {
   MdSend,
 } from "react-icons/md";
 
-import styles from "./MessageComposer.module.css";
+import styles from "./MessageComposer.module.scss";
 
 function formatFileSize(bytes) {
   if (bytes < 1024) {

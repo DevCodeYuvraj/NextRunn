@@ -5,7 +5,7 @@ import {
   MdDeleteForever,
 } from "react-icons/md";
 
-import styles from "./DeleteContactModal.module.css";
+import styles from "./DeleteContactModal.module.scss";
 
 export default function DeleteContactModal({
   open,

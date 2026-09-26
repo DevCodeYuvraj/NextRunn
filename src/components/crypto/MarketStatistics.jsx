@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./MarketStatistics.module.css";
+import styles from "./MarketStatistics.module.scss";
 
 const stats = [
   {
